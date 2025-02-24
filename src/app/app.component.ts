@@ -5,7 +5,6 @@ import { ProfileComponent } from './profile/profile.component';
 import { ExpertiseComponent } from './expertise/expertise.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { PriorExperienceComponent } from './prior-experience/prior-experience.component';
-import { ProfessionalDevelopmentComponent } from './professional-development/professional-development.component';
 import { EducationComponent } from './education/education.component';
 import { ResumeDataService } from './resume-data.service';
 import { ContactComponent } from './contact/contact.component';
@@ -16,11 +15,8 @@ import { IExperience, IResume } from '../resume.data.model';
   imports: [
     RouterOutlet,
     HeaderComponent,
-    ProfileComponent,
     ExpertiseComponent,
     ExperienceComponent,
-    PriorExperienceComponent,
-    ProfessionalDevelopmentComponent,
     EducationComponent,
     ContactComponent,
   ],
