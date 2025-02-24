@@ -1,0 +1,50 @@
+<section id="areas-of-expertise" class="mb-6 text-sm">
+  <h3 class="text-xl border-b-1 mb-2">Key Skills</h3>
+  <div class="flex-col gap-y-5">
+    <ul class="mb-5 align-middle">
+      @for (skill of skills.languages; track $index) {
+      <li class="flex justify-between gap-0">
+        {{ skill.name }}
+        <p>
+          <span class="font-semibold text-blue-400 w-2xs text-xl">
+            @for (rating of skillLevel(skill.rating); track $index) { * }
+          </span>
+          <span class="font-semibold text-gray-300 w-2xs text-xl">
+            @for (rating of skillLevelFiller(skill.rating); track $index) { * }
+          </span>
+        </p>
+      </li>
+      }
+    </ul>
+    <ul class="mb-5 align-middle">
+      @for (skill of skills.frameworks; track $index) {
+      <li class="flex justify-between gap-0">
+        {{ skill.name }}
+        <p>
+          <span class="font-semibold text-blue-400 w-2xs text-xl">
+            @for (rating of skillLevel(skill.rating); track $index) { * }
+          </span>
+          <span class="font-semibold text-gray-300 w-2xs text-xl">
+            @for (rating of skillLevelFiller(skill.rating); track $index) { * }
+          </span>
+        </p>
+      </li>
+      }
+    </ul>
+    <ul class="mb-5">
+      @for (skill of skills.tooling; track $index) {
+      <li class="flex justify-between gap-0">
+        <p>{{ skill.name }}</p>
+        <p>
+          <span class="font-semibold text-blue-400 w-2xs text-xl">
+            @for (rating of skillLevel(skill.rating); track $index) { * }
+          </span>
+          <span class="font-semibold text-gray-300 w-2xs text-xl">
+            @for (rating of skillLevelFiller(skill.rating); track $index) { * }
+          </span>
+        </p>
+      </li>
+      }
+    </ul>
+  </div>
+</section>

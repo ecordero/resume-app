@@ -1,0 +1,13 @@
+<section id="education" class="mb-6 text-sm">
+  <h3 class="text-xl border-b-1 mb-2">Education</h3>
+  @for (cert of education; track $index) {
+  <div class="mb-2.5">
+    <p class="font-semibold">
+      {{ cert.certification ?? cert.degree
+      }}<span class="font-normal"
+        >&mdash;{{ cert.institution }} ({{ cert.location }})</span
+      >
+    </p>
+  </div>
+  }
+</section>

@@ -1,0 +1,14 @@
+<header class="flex justify-between gap-8 mb-8 align-bottom">
+  <div class="min-w-xl">
+    <h1 class="text-6xl font-semibold">{{ name }}</h1>
+    <h2 class="text-3xl text-gray-600 mt-2">
+      @for (role of roles; track $index) {
+      {{ role }}<br />
+      }
+    </h2>
+    <p class="text-xl mb-2">{{ resumeLocation }}</p>
+  </div>
+  <div class="max-w-xl text-justify leading-5.5">
+    <app-profile [profile]="profile"></app-profile>
+  </div>
+</header>
