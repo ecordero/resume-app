@@ -1,15 +1,13 @@
 <section id="contact" class="mb-6 text-sm">
-  <h3 class="text-xl border-b-1 mb-2">Contact</h3>
+  <h3 class="font-semibold text-xl border-b-1 mb-2">Contact</h3>
   <ul class="list-none">
-    <li><span>phone:</span> {{ contact.phone }}</li>
+    <li>{{ contact.phone }}</li>
     <li>
-      <span>email:</span>
       <a href="mailto:{{ contact.email }}" class="text-blue-500">{{
         contact.email
       }}</a>
     </li>
     <li>
-      <span>LinkedIn:</span>
       <a href="{{ contact.linkedin }}" class="text-blue-500">{{
         contact.linkedin
       }}</a>
