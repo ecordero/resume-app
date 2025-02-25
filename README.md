@@ -1,59 +1,22 @@
-# ResumeApp
+# Resume App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+This small, personal project simply displays my resume. My primary goal was to have a quick, easy way to see how changing various parts of my resume affects the layout (on screen and when printing). For instance, marking a position in my work history as `isRecent: false` will keep it fro displaying. This sort of change is useful for me to compare my complete resume to a shorter, more current version, allowing me to decide whether I need to adjust the layout.
 
-## Development server
+## Tech Notes
 
-To start a local development server, run:
+The app is built using Angular, because that's the framework I've been using most recently. There is a good chance I'll be building it again in React at some point.
 
-```bash
-ng serve
-```
+The app uses Tailwind. Although I've used CSS for many years (plain CSS, LESS, SASS, Bootstrap, etc.), I hadn't tried Tailwind.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## To-Do List:
 
-## Code scaffolding
+This is not a comprehensive list.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- :white_check_mark: Use data-driven content
+- :white_check_mark: Use Tailwind for styles
+- :white_check_mark: Add print styles
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- :white_circle: Show/hide additional skills
+- :white_circle: Show/hide older work experience
+- :white_circle: Implement more interesting design
+- :white_circle: Build a React version (in a separate repository)
