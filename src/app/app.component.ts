@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     private elementRef: ElementRef,
-    private resumeDataService: ResumeDataService
+    private resumeDataService: ResumeDataService,
   ) {}
 
   ngOnInit() {
@@ -45,10 +45,10 @@ export class AppComponent implements OnInit {
     this.resumeDataService.getData().subscribe((data: IResume[]) => {
       this.resumeData = data[0];
       this.currentExperience = this.resumeData.experience.filter(
-        (exp) => exp.isRecent === true
+        (exp) => exp.isRecent === true,
       );
       this.previousExperience = this.resumeData.experience.filter(
-        (exp) => exp.isRecent !== true
+        (exp) => exp.isRecent !== true,
       );
       console.log('this.resumeData', this.resumeData);
       console.log('this.resumeData.name', this.resumeData.name);

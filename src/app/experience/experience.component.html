@@ -1,30 +1,38 @@
-<section id="experience">
-  <h3 class="font-semibold text-xl border-b-1 mb-5">Experience</h3>
+<section id="experience" class="print:text-sm">
+  <h3 class="mb-5 border-b-1 text-xl font-semibold print:mb-2 print:text-sm">
+    Experience
+  </h3>
   @for (pos of experience; track $index) {
-  <div class="flex gap-5 justify-between border-b-1 border-gray-300 mb-2">
-    <h4 class="font-bold min-w-1/3">
-      {{ pos.title }}
-    </h4>
-    <p class="text-l font-bold">{{ pos.startDate }}&ndash;{{ pos.endDate }}</p>
-  </div>
-  <div class="animate mb-4 flex gap-7 pb-3">
-    <div class="w-1/3">
-      <p class="text-l text-gray-500 mb-3 text-sm font-bold">
-        {{ pos.company }}
-      </p>
-      <p
-        class="italic font-serif text-sm text-gray-500 hover:text-gray-700 leading-4"
-      >
-        {{ pos.summary }}
+    <div
+      class="mb-2 flex justify-between gap-5 border-b-1 border-gray-300 print:mt-2 print:mb-0 print:border-gray-700"
+    >
+      <h4 class="min-w-1/3 font-bold print:text-xs">
+        {{ pos.title }}
+      </h4>
+      <p class="text-l font-bold print:text-xs">
+        {{ pos.startDate }}&ndash;{{ pos.endDate }}
       </p>
     </div>
-    <div class="w-2/3">
-      <ul class="list-disc ml-4.5">
-        @for (accomplishment of pos.accomplishments; track $index) {
-        <li class="mb-2">{{ accomplishment }}</li>
-        }
-      </ul>
+    <div class="animate mb-4 flex gap-7 pb-3 print:mb-0">
+      <div class="w-1/3">
+        <p
+          class="text-l mb-3 text-sm font-bold text-gray-500 print:mb-1 print:text-xs print:font-semibold"
+        >
+          {{ pos.company }}
+        </p>
+        <p
+          class="font-serif text-sm leading-4 text-gray-700 italic print:text-xs print:leading-3"
+        >
+          {{ pos.summary }}
+        </p>
+      </div>
+      <div class="w-2/3 print:text-xs">
+        <ul class="ml-4.5 list-disc">
+          @for (accomplishment of pos.accomplishments; track $index) {
+            <li class="mb-2">{{ accomplishment }}</li>
+          }
+        </ul>
+      </div>
     </div>
-  </div>
   }
 </section>
