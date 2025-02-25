@@ -57,7 +57,8 @@
         "accomplishments": [
           "Delivered a new flagship SaaS product with exceptional code quality, UI performance, and enhanced usability and accessibility, utilizing technologies such as AngularJS, Node, FusionCharts, WebPack, Jasmine, and ARIA.",
           "Improved code quality by creating a 'definition of done' that identified key details and edge cases prior to product delivery, increasing developer confidence and facilitating earlier identification of larger issues.",
-          "Enhanced workflow efficiency by streamlining unit testing process by volunteering to write tests for AngularJS code written by others, identifying challenges and sharing solutions with the team, expanding codebase knowledge while speeding up unit test development."
+          "Enhanced workflow efficiency by streamlining unit testing process by volunteering to write tests for AngularJS code written by others, identifying challenges and sharing solutions with the team, expanding codebase knowledge while speeding up unit test development.",
+          "Collaborated with legally blind consultant to improve accessibility of product using ARIA and verifying with NVDA screen reader and other tools."
         ]
       },
       {
