@@ -1,0 +1,179 @@
+[
+  {
+    "name": "Edward Cordero",
+    "location": "Grafton, MA",
+    "contact": {
+      "email": "ed.cordero@gmail.com",
+      "phone": "617-549-1648",
+      "linkedin": "www.linkedin.com/in/ecordero"
+    },
+    "title": "Senior Front End Web Developer | Software Engineer",
+    "roles": ["Senior Front End Web Developer", "Software Engineer"],
+    "profile": "Senior web developer with 15+ years of hands-on experience delivering web-based, data-driven solutions for Fortune 500 companies, small businesses, and startups. Proven ability to lead projects from conception to implementation, blending expertise with a passion for learning and applying new technologies to deliver award- winning, innovative results. Experience working with both greenfield and legacy projects, ensuring successful solutions that drive business success. Experience in Ed Tech, Marketing, e-Commerce, and Workforce Management.",
+    "expertise": {
+      "languages": [
+        {"name": "JavaScript", "rating": 4},
+        {"name": "TypeScript", "rating": 4},
+        {"name": "HTML/CSS", "rating": 4},
+        {"name": "Tailwind", "rating": 2}
+      ],
+      "frameworks": [
+        {"name": "Angular", "rating": 4},
+        {"name": "Karma/Jasmine", "rating": 3},
+        {"name": "React", "rating": 2},
+        {"name": "Vue", "rating": 1}
+      ],
+      "tooling": [
+        {"name": "Git", "rating": 4},
+        {"name": "Vite", "rating": 2},
+        {"name": "Webpack", "rating": 2},
+        {"name": "SQL", "rating": 2},
+        {"name": "MongoDB", "rating": 1}
+      ]
+    },
+    "experience": [
+      {
+        "title": "Senior Software Engineer, Front End",
+        "company": "Lexia / Cambium Learning Group",
+        "location": "Concord, MA",
+        "startDate": "September 2018",
+        "endDate": "November 2024",
+        "isRecent": true,
+        "summary": "Provided technical expertise and strategic leadership within an Agile team to optimize development workflows, enhance API quality, and deliver seamless integration of front-end, driving efficiency, collaboration, and innovation.",
+        "accomplishments": [
+          "Improved delivery time and quality of high-profile projects by enhancing front-end development efficiency, resulting in fewer late-stage API changes, minimal to no UX/UI design revisions, enabling more 'nice-to-haves.'",
+          "Elevated REST API output quality by collaborating with back-end developers to define required data structures earlier in the development cycle, resulting in robust, on-time REST API and project delivery.",
+          "Significantly improved quality of new and legacy code while moving it closer to modernization by creating, converting, and implementing TypeScript components in preparation for updating from AngularJS to Angular."
+        ]
+      },
+      {
+        "title": "Senior UI Software Engineer",
+        "company": "Kronos, Inc. (now UKG)",
+        "location": "Lowell, MA",
+        "startDate": "September 2014",
+        "endDate": "September 2018",
+        "isRecent": true,
+        "summary": "Leveraged my experience to guide development and delivery of flagship HCM product with a focus on code quality, performance, and accessibility, using new technologies and optimizing workflows to enhance feature reliability.",
+        "accomplishments": [
+          "Delivered a new flagship SaaS product with exceptional code quality, UI performance, and enhanced usability and accessibility, utilizing technologies such as AngularJS, Node, FusionCharts, WebPack, Jasmine, and ARIA.",
+          "Improved code quality by creating a 'definition of done' that identified key details and edge cases prior to product delivery, increasing developer confidence and facilitating earlier identification of larger issues.",
+          "Enhanced workflow efficiency by streamlining unit testing process by volunteering to write tests for AngularJS code written by others, identifying challenges and sharing solutions with the team, expanding codebase knowledge while speeding up unit test development.",
+          "Collaborated with legally blind consultant to improve accessibility of product using ARIA and verifying with NVDA screen reader and other tools."
+        ]
+      },
+      {
+        "title": "Senior UI Software Engineer",
+        "company": "Staples, Inc.",
+        "location": "Framingham, MA",
+        "startDate": "July 2013",
+        "endDate": "August 2014",
+        "isRecent": true,
+        "summary": "Successfully implemented new design and shopping cart enhancements using CSS, JavaScript, and Gulp.",
+        "accomplishments": [
+          "Received company award for work on Staples.com redesign project, which included navigation and checkout enhancements, as well as credit card security feature integration. Led UI development team, coordinating with vendors on pilot project using Agile and a new technology stack and emerging tools (Gulp, Webpack)."
+        ]
+      },
+      {
+        "title": "Senior Interactive Developer",
+        "company": "SapientNitro (Publicis Sapient)",
+        "location": "Boston, MA",
+        "startDate": "July 2010",
+        "endDate": "March 2013",
+        "isRecent": true,
+        "summary": "Successfully implemented award-winning, dynamic UI designs Fortune 500 companies.",
+        "accomplishments": [
+          "Awarded Best in Class Interactive Media Award for work on Sunglass Hut (Luxottica). Successfully planned and developed web application work for Fortune 500 clients, including Staples, RAM Trucks, and Dunkin’ Donuts."
+        ]
+      },
+      {
+        "title": "Web Application Developer",
+        "company": "Babson College",
+        "location": "Wellesley, MA",
+        "startDate": "January 2006",
+        "endDate": "March 2010",
+        "isRecent": false,
+        "accomplishments": [
+          "Recognized for work on high-profile Babson Buzz project. Implemented first NCAA form in the country to accept online signatures. Created interactive developer tool to enable quick, flexible display of content."
+        ]
+      },
+      {
+        "title": "Senior Full Stack Web Developer",
+        "company": "Digibug Express, Inc.",
+        "location": "Waltham, MA",
+        "startDate": "June 2005",
+        "endDate": "December 2005",
+        "isRecent": false,
+        "accomplishments": [
+          "Successfully developed and delivered customized SassS retail storefronts and building management portals for clients using PHP, HTML, CSS, MySQL."
+        ]
+      },
+      {
+        "title": "Senior Full Stack Web Application Developer",
+        "company": "Pearson Education",
+        "location": "Boston, MA",
+        "startDate": "July 1999",
+        "endDate": "June 2005",
+        "isRecent": false,
+        "accomplishments": [
+          "Successfully led web application development, championing adoption of web standards, reducing costs by streamlining processes that enabled a staff of three to maintain 10K+ static HTML pages, and received awards for building a customized CMS, as well as a customer-facing bulletin board application."
+        ]
+      },
+      {
+        "title": "Freelance Full Stack Developer",
+        "company": "Sasuga Japanese Bookstore",
+        "location": "Cambridge, MA",
+        "startDate": "April 1998",
+        "endDate": "June 1999",
+        "isRecent": false,
+        "accomplishments": [
+          "Successfully integrated Japanese ordering with POS system by developing a bilingual database for tracking orders, as well as converting online catalog with data-driven bilingual content."
+        ]
+      }
+    ],
+    "professionalDevelopment": {
+      "onlineCourses": [
+        "Angular",
+        "Functional Programming",
+        "Webpack"
+      ],
+      "workshops": [
+        "Angular Testing",
+        "TypeScript",
+        "AngularJS",
+        "NodeJS",
+        "CSS",
+        "Web Components",
+        "Accessibility"
+      ],
+      "independent": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "Angular",
+        "Svelt",
+        "Vue",
+        "Functional Programming",
+        "Refactoring",
+        "NodeJS",
+        "Web Components",
+        "CSS Animation",
+        "Web Workers",
+        "Bash Scripting",
+        "Python",
+        "Circuit Python"
+      ]
+    },
+    "education": [
+      {
+        "degree": "A.B. English, minor in Japanese studies",
+        "institution": "Stanford University",
+        "location": "Stanford, CA"
+      },
+      {
+        "certification": "Japanese Proficiency Level 2 Certification",
+        "institution": "Japan Foundation/Association of International Education",
+        "location": "Tokyo, Japan"
+      }
+    ]
+  }
+]
