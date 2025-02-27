@@ -14,6 +14,7 @@ export interface ISkills {
   languages: ISkill[];
   frameworks: ISkill[];
   tooling: ISkill[];
+  uiux: ISkill[];
 }
 
 export interface ISkill {
