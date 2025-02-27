@@ -15,10 +15,7 @@
         class="min-w-1/4"
         [skills]="resumeData.expertise"
       ></app-expertise>
-      <app-experience
-        class=""
-        [experience]="currentExperience"
-      ></app-experience>
+      <app-experience [experience]="currentExperience"></app-experience>
     </div>
     <div class="flex gap-10 print:mt-5">
       <app-contact
