@@ -15,8 +15,8 @@ This is not a comprehensive list.
 - :white_check_mark: Use data-driven content
 - :white_check_mark: Use Tailwind for styles
 - :white_check_mark: Add print styles
+- :white_check: Use Tailwind @theme directive
 
 - :white_circle: Show/hide additional skills
 - :white_circle: Show/hide older work experience
-- :white_circle: Implement more interesting design
-- :white_circle: Build a React version (in a separate repository)
+- :white_circle: Add icons
