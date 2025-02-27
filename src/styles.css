@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
 
-.page {
-    background-color: rebeccapurple;
+@theme {
+  --color-header: #3967c2;
+  --color-page: #1e3e7d;
 }

@@ -1,11 +1,13 @@
-<section id="areas-of-expertise" class="print:text-2xs mb-6 text-sm print:pt-1">
-  <h3 class="mb-2 border-b-1 text-xl font-semibold print:text-xs">
+<section id="areas-of-expertise" class="print:text-2xs mb-0 text-sm">
+  <h3
+    class="mb-2 border-b-1 text-xl font-semibold tracking-wide uppercase print:text-sm"
+  >
     Key Skills
   </h3>
-  <div class="flex-col gap-y-5">
+  <div class="">
     <ul class="mb-5 align-middle">
       @for (skill of skills.languages; track $index) {
-        <li class="flex justify-between gap-0">
+        <li class="flex justify-between gap-5">
           {{ skill.name }}
           <p>
             <span
@@ -16,7 +18,7 @@
               }
             </span>
             <span
-              class="w-2xs text-xl font-semibold text-gray-300 print:text-xs"
+              class="w-2xs text-xl font-semibold text-gray-300 print:text-xs print:text-gray-200"
             >
               @for (rating of skillLevelFiller(skill.rating); track $index) {
                 *
@@ -28,7 +30,7 @@
     </ul>
     <ul class="mb-5 align-middle">
       @for (skill of skills.frameworks; track $index) {
-        <li class="flex justify-between gap-0">
+        <li class="flex justify-between gap-5">
           {{ skill.name }}
           <p>
             <span
@@ -50,8 +52,8 @@
       }
     </ul>
     <ul class="mb-5">
-      @for (skill of skills.tooling; track $index) {
-        <li class="flex justify-between gap-0">
+      @for (skill of skills.uiux; track $index) {
+        <li class="flex justify-between gap-5">
           <p>{{ skill.name }}</p>
           <p>
             <span
@@ -62,7 +64,30 @@
               }
             </span>
             <span
-              class="w-2xs text-xl font-semibold text-gray-300 print:text-xs"
+              class="print:gray-200 w-2xs text-xl font-semibold text-gray-300 print:text-xs"
+            >
+              @for (rating of skillLevelFiller(skill.rating); track $index) {
+                *
+              }
+            </span>
+          </p>
+        </li>
+      }
+    </ul>
+    <ul class="mb-5">
+      @for (skill of skills.tooling; track $index) {
+        <li class="flex justify-between gap-5">
+          <p>{{ skill.name }}</p>
+          <p>
+            <span
+              class="w-2xs text-xl font-semibold text-blue-400 print:text-xs"
+            >
+              @for (rating of skillLevel(skill.rating); track $index) {
+                *
+              }
+            </span>
+            <span
+              class="print:gray-200 w-2xs text-xl font-semibold text-gray-300 print:text-xs"
             >
               @for (rating of skillLevelFiller(skill.rating); track $index) {
                 *

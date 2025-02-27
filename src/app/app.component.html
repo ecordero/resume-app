@@ -1,5 +1,5 @@
 <main
-  class="mx-auto mt-15 mb-20 max-w-6xl rounded-lg bg-white p-6 pt-15 print:max-w-5xl print:pr-10 print:pl-10 print:shadow-none"
+  class="mx-auto mt-5 mb-20 max-w-6xl rounded-lg bg-white p-6 pt-15 print:mt-0 print:mr-5 print:ml-5 print:max-w-5xl print:pt-5 print:pr-15 print:pl-15"
 >
   @if (resumeData) {
     <app-header
@@ -10,9 +10,9 @@
       [profile]="resumeData.profile"
     >
     </app-header>
-    <div class="flex gap-10 print:gap-x-5 print:gap-y-2">
+    <div class="flex gap-10">
       <app-expertise
-        class="min-w-1/4 print:min-w-35"
+        class="min-w-1/4"
         [skills]="resumeData.expertise"
       ></app-expertise>
       <app-experience
@@ -22,10 +22,13 @@
     </div>
     <div class="flex gap-10 print:mt-5">
       <app-contact
-        class="min-w-1/4"
+        class="min-w-1/4 print:flex-grow"
         [contact]="resumeData.contact"
       ></app-contact>
-      <app-education [education]="resumeData.education"></app-education>
+      <app-education
+        class="flex-grow"
+        [education]="resumeData.education"
+      ></app-education>
     </div>
   }
 </main>

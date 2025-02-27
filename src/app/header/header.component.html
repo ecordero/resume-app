@@ -1,15 +1,15 @@
-<header class="mb-8 flex-col justify-between gap-8 align-bottom print:mb-3">
+<header class="mb-8 flex-col justify-between gap-8 align-bottom print:mb-0">
   <div class="mb-3 min-w-xl">
-    <h1 class="border-b-1 text-6xl font-semibold print:text-3xl">
+    <h1 class="border-b-2 text-6xl font-semibold tracking-wide print:text-3xl">
       {{ name }}
     </h1>
   </div>
   <div
-    class="flex justify-between leading-5.5 text-gray-600 print:text-gray-900"
+    class="flex justify-between leading-5.5 text-gray-600 print:mb-0 print:text-gray-900"
   >
     <div class="min-w-2/5 print:min-w-55">
       <h2
-        class="mb-5 text-2xl text-gray-600 print:text-sm print:whitespace-nowrap print:text-gray-900"
+        class="mb-5 text-2xl tracking-wide print:text-sm print:tracking-normal print:whitespace-nowrap print:text-gray-900"
       >
         @for (role of roles; track $index) {
           {{ role }}<br />

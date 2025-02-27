@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     console.log('ngOnInit');
     this.elementRef.nativeElement.ownerDocument.body.className =
-      'bg-purple-950 text-gray-900';
+      'bg-page text-gray-900 print:bg-transparent';
 
     this.getResumeData();
   }

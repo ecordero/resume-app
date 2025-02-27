@@ -1,13 +1,17 @@
 <section id="education" class="mb-6 text-sm print:text-xs">
-  <h3 class="mb-2 border-b-1 text-xl font-semibold print:text-xs">Education</h3>
+  <h3
+    class="mb-2 border-b-1 text-xl font-semibold tracking-wide uppercase print:text-xs"
+  >
+    Education
+  </h3>
   @for (cert of education; track $index) {
-    <div class="mb-2.5">
+    <div class="mb-1.5 flex justify-between">
       <p class="font-semibold">
-        {{ cert.certification ?? cert.degree
-        }}<span class="font-normal"
-          >&mdash;{{ cert.institution }} ({{ cert.location }})</span
-        >
+        {{ cert.certification ?? cert.degree }}
       </p>
+      <div class="text-right">
+        <p class="">{{ cert.institution }} ({{ cert.location }})</p>
+      </div>
     </div>
   }
 </section>
