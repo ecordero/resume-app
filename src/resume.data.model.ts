@@ -11,10 +11,7 @@ export interface IResume {
 }
 
 export interface ISkills {
-  languages: ISkill[];
-  frameworks: ISkill[];
-  tooling: ISkill[];
-  uiux: ISkill[];
+  [index: string]: ISkill[];
 }
 
 export interface ISkill {
