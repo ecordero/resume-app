@@ -1,22 +1,24 @@
-import { Component, Input } from '@angular/core';
-import { IExperience, ISkills } from '../../resume.data.model';
+import { Component, Input, OnInit } from '@angular/core';
+import { ISkills } from '../../resume.data.model';
+import { ListSkillsComponent } from '../list-skills/list-skills.component';
 
 @Component({
   selector: 'app-expertise',
-  imports: [],
+  imports: [ListSkillsComponent],
   templateUrl: './expertise.component.html',
   styleUrl: './expertise.component.css',
 })
-export class ExpertiseComponent {
+export class ExpertiseComponent implements OnInit {
   @Input({ required: true }) skills!: ISkills;
-  ratingScale = 4;
 
-  skillLevel(n: number): string[] {
-    const skillLevel: string[] = new Array(n).fill('*');
-    return skillLevel;
+  skillsKeys!: string[];
+
+  ngOnInit() {
+    this.skillsKeys = this.getSkillsKeys(this.skills);
+    this.skillsKeys.forEach((k) => console.log(k));
   }
-  skillLevelFiller(n: number): string[] {
-    const skillLevel: string[] = new Array(this.ratingScale - n).fill('*');
-    return skillLevel;
+
+  getSkillsKeys(skills: ISkills): string[] {
+    return Object.keys(skills) as string[];
   }
 }
