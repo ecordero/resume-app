@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IResume } from '../resume.data.model';
 
@@ -8,8 +8,7 @@ import { IResume } from '../resume.data.model';
 })
 export class ResumeDataService {
   private resumeDataUrl = '/data/resume-data.json';
-
-  constructor(private http: HttpClient) {}
+  http = inject(HttpClient);
 
   getData(): Observable<IResume[]> {
     return this.http.get<IResume[]>(this.resumeDataUrl);
