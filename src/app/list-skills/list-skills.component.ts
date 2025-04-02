@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ISkill, ISkills } from '../../resume.data.model';
+import { ISkill } from '../../resume.data.model';
 
 @Component({
   selector: 'app-list-skills',
