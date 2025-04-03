@@ -34,11 +34,13 @@ export interface IExperience {
   isRecent: boolean;
   summary: string;
   accomplishments: string[];
+  skills?: ISkill[];
 }
 
 export interface IEducation {
   certification?: string;
   degree?: string;
+  note?: string;
   institution: string;
   location: string;
 }

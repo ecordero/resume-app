@@ -8,6 +8,11 @@
     <div class="mb-1.5 flex justify-between">
       <p class="font-semibold">
         {{ cert.certification ?? cert.degree }}
+        @if (cert.degree && cert.note) {
+          <span class="font-normal text-gray-500 italic"
+            >({{ cert.note }})</span
+          >
+        }
       </p>
       <div class="text-right">
         <p class="">{{ cert.institution }} ({{ cert.location }})</p>

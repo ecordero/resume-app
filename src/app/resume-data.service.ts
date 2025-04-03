@@ -8,6 +8,7 @@ import { IResume } from '../resume.data.model';
 })
 export class ResumeDataService {
   private resumeDataUrl = '/data/resume-data.json';
+
   http = inject(HttpClient);
 
   getData(): Observable<IResume[]> {
