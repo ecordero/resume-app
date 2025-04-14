@@ -37,7 +37,7 @@
       "backend": [
         { "name": "NodeJS", "rating": 3 },
         { "name": "MongoDB", "rating": 1 },
-        { "name": "OpenAI", "rating": 3 },
+        { "name": "OpenAPI", "rating": 3 },
         { "name": "SQL", "rating": 2 }
       ]
     },
