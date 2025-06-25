@@ -43,7 +43,21 @@
     },
     "experience": [
       {
-        "title": "Senior Software Engineer, Front End",
+        "title": "Senior Software Developer, Front End (Remote)",
+        "company": "Sharper Lending / Xactus",
+        "location": "Broomall, Pennsylvania",
+        "startDate": "April 2025",
+        "endDate": "Present",
+        "isRecent": true,
+        "summary": "Provide front end development expertise, leadership, and guidance as SME.",
+        "accomplishments": [
+          "Successfully revived multiple Angular applications by upgrading from unsupported versions to version 19.",
+          "Collaborate with other developers to update deployment builds related to updated applications.",
+          "Develop new Angular application that consolidates existing applications and modernizes architecture, design, and development practices."
+        ]
+      },
+      {
+        "title": "Senior Software Engineer, Front End (On site/Remote)",
         "company": "Lexia / Cambium Learning Group",
         "location": "Concord, MA",
         "startDate": "September 2018",
