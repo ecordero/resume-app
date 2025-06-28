@@ -85,4 +85,8 @@ export class ResumeComponent implements OnInit {
       this.getResumeData();
     });
   }
+
+  navigateToPrint() {
+    this.router.navigate(['/print']);
+  }
 }

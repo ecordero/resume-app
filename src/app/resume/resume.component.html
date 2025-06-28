@@ -1,7 +1,7 @@
-<!-- Development navigation buttons -->
-@if (isDevelopment) {
-  <div class="fixed top-4 right-4 z-50 print:hidden">
-    <div class="flex gap-2 bg-white border border-gray-300 rounded-lg shadow-lg p-2">
+<!-- Navigation buttons -->
+<div class="fixed top-4 right-4 z-50 print:hidden">
+  <div class="flex gap-2 bg-white border border-gray-300 rounded-lg shadow-lg p-2">
+    @if (isDevelopment) {
       <button
         (click)="navigateToReal()"
         [class]="currentRoute === '' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-700'"
@@ -16,9 +16,15 @@
       >
         Fake Data
       </button>
-    </div>
+    }
+    <button
+      (click)="navigateToPrint()"
+      class="px-3 py-1 text-sm rounded border bg-gray-100 text-gray-700 hover:bg-blue-500 hover:text-white transition-colors"
+    >
+      Print View →
+    </button>
   </div>
-}
+</div>
 
 <main
   class="mx-auto mt-5 mb-20 max-w-6xl rounded-lg bg-white p-6 pt-15 print:mt-0 print:mr-5 print:ml-5 print:max-w-5xl print:pt-5 print:pr-15 print:pl-15"
