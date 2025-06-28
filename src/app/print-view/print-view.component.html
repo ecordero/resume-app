@@ -9,7 +9,7 @@
 </div>
 
 <main
-  class="mx-auto mt-5 mb-20 max-w-6xl rounded-lg bg-white p-6 pt-15 print:mt-0 print:mr-5 print:ml-5 print:max-w-5xl print:pt-5 print:pr-15 print:pl-15 print:shadow-none"
+  class="mx-auto mt-5 mb-20 max-w-6xl rounded-lg bg-white p-6 pt-15 print:mt-0 print:mr-3 print:ml-3 print:max-w-5xl print:pt-5 print:pr-8 print:pl-8 print:shadow-none"
 >
   @if (resumeData) {
     <app-header
@@ -20,9 +20,10 @@
       [profile]="resumeData.profile"
     >
     </app-header>
-    <div class="flex gap-10">
+    <!-- Skills section above experience -->
+    <div class="block">
       <app-expertise
-        class="min-w-1/4"
+        class="mb-4"
         [skills]="resumeData.expertise"
       ></app-expertise>
       <app-experience [experience]="currentExperience"></app-experience>
