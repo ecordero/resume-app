@@ -32,7 +32,8 @@
         { "name": "Git", "rating": 4 },
         { "name": "Vite", "rating": 2 },
         { "name": "Webpack", "rating": 2 },
-        { "name": "Postman/Bruno", "rating": 3 }
+        { "name": "Postman/Bruno", "rating": 3 },
+        { "name": "AWS", "rating": 1 }
       ],
       "backend": [
         { "name": "NodeJS", "rating": 3 },
