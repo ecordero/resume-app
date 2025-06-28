@@ -8,11 +8,19 @@ import { environment } from '../environments/environment';
   providedIn: 'root',
 })
 export class ResumeDataService {
-  private resumeDataUrl = environment.resumeDataUrl;
-
   http = inject(HttpClient);
 
-  getData(): Observable<IResume[]> {
-    return this.http.get<IResume[]>(this.resumeDataUrl);
+  getData(useFakeData: boolean = false): Observable<IResume[]> {
+    const url = this.getDataUrl(useFakeData);
+    console.log('ResumeDataService.getData() called, useFakeData:', useFakeData, 'URL:', url);
+    return this.http.get<IResume[]>(url);
+  }
+
+  private getDataUrl(useFakeData: boolean): string {
+    if (useFakeData && !environment.production && 'fakeResumeDataUrl' in environment) {
+      return (environment as any).fakeResumeDataUrl;
+    }
+    
+    return environment.resumeDataUrl;
   }
 }

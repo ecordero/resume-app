@@ -1,0 +1,55 @@
+<!-- Development navigation buttons -->
+@if (isDevelopment) {
+  <div class="fixed top-4 right-4 z-50 print:hidden">
+    <div class="flex gap-2 bg-white border border-gray-300 rounded-lg shadow-lg p-2">
+      <button
+        (click)="navigateToReal()"
+        [class]="currentRoute === '' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-700'"
+        class="px-3 py-1 text-sm rounded border hover:bg-blue-500 hover:text-white transition-colors"
+      >
+        Real Data
+      </button>
+      <button
+        (click)="navigateToFake()"
+        [class]="currentRoute === 'fake' ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-700'"
+        class="px-3 py-1 text-sm rounded border hover:bg-blue-500 hover:text-white transition-colors"
+      >
+        Fake Data
+      </button>
+    </div>
+  </div>
+}
+
+<main
+  class="mx-auto mt-5 mb-20 max-w-6xl rounded-lg bg-white p-6 pt-15 print:mt-0 print:mr-5 print:ml-5 print:max-w-5xl print:pt-5 print:pr-15 print:pl-15"
+>
+  @if (resumeData) {
+    <app-header
+      [resumeLocation]="resumeData.location"
+      [name]="resumeData.name"
+      [title]="resumeData.title"
+      [roles]="resumeData.roles"
+      [profile]="resumeData.profile"
+    >
+    </app-header>
+    <div class="flex gap-10">
+      <app-expertise
+        class="min-w-1/4"
+        [skills]="resumeData.expertise"
+      ></app-expertise>
+      <app-experience [experience]="currentExperience"></app-experience>
+    </div>
+    <div class="flex gap-10 print:mt-5">
+      <app-contact
+        class="min-w-1/4 print:flex-grow"
+        [contact]="resumeData.contact"
+      ></app-contact>
+      <app-education
+        class="flex-grow"
+        [education]="resumeData.education"
+      ></app-education>
+    </div>
+  } @else {
+    <div>Loading resume data...</div>
+  }
+</main>
