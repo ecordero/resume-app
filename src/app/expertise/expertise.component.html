@@ -4,33 +4,32 @@
   >
     Key Skills
   </h3>
-  <!-- Screen view -->
-  <div [class]="isPrintView ? 'hidden' : 'grid grid-cols-3'">
-    <ul class="list-disc list-outside space-y-1 p-4 ml-4 mb-6">
-      @for (key of firstColumnKeys; track $index) {
-        <li>
-          {{ getSkillsAsCommaSeparatedList(key) }}
-        </li>
+  
+  <!-- Default view - Individual skills with ratings -->
+  <div [class]="isAtsView ? 'hidden' : 'block'">
+    <div class="flex-col gap-y-5">
+      @for (key of skillsKeys; track $index) {
+        <ul class="mb-5 align-middle">
+          @for (skill of skills[key]; track $index) {
+            <li class="flex justify-between gap-0">
+              {{ skill.name }}
+              <p>
+                <span class="font-semibold text-blue-400 w-2xs text-xl">
+                  @for (rating of skillLevel(skill.rating); track $index) { * }
+                </span>
+                <span class="font-semibold text-gray-300 w-2xs text-xl">
+                  @for (rating of skillLevelFiller(skill.rating); track $index) { * }
+                </span>
+              </p>
+            </li>
+          }
+        </ul>
       }
-    </ul>
-    <ul class="list-disc list-outside space-y-1 p-4 mb-6">
-      @for (key of secondColumnKeys; track $index) {
-        <li>
-          {{ getSkillsAsCommaSeparatedList(key) }}
-        </li>
-      }
-    </ul>
-    <ul class="list-disc list-outside space-y-1 p-4 mb-6">
-      @for (key of thirdColumnKeys; track $index) {
-        <li>
-          {{ getSkillsAsCommaSeparatedList(key) }}
-        </li>
-      }
-    </ul>
+    </div>
   </div>
   
-  <!-- Print view -->
-  <div [class]="isPrintView ? 'grid grid-cols-3' : 'hidden'">
+  <!-- ATS view - 3-column comma-separated -->
+  <div [class]="isAtsView ? 'grid grid-cols-3' : 'hidden'">
     <ul class="list-disc list-outside space-y-1 p-4 ml-4 mb-6">
       @for (key of firstColumnKeys; track $index) {
         <li>

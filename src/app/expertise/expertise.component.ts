@@ -1,18 +1,18 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ISkills } from '../../resume.data.model';
-import { ListSkillsComponent } from '../list-skills/list-skills.component';
 
 @Component({
   selector: 'app-expertise',
-  imports: [ListSkillsComponent],
+  imports: [],
   templateUrl: './expertise.component.html',
   styleUrl: './expertise.component.css',
 })
 export class ExpertiseComponent implements OnInit {
   @Input({ required: true }) skills!: ISkills;
-  @Input() isPrintView: boolean = false;
+  @Input() isAtsView: boolean = false;
 
   skillsKeys!: string[];
+  ratingScale = 4;
 
   ngOnInit() {
     this.skillsKeys = this.getSkillsKeys(this.skills);
@@ -41,5 +41,15 @@ export class ExpertiseComponent implements OnInit {
 
   get thirdColumnKeys(): string[] {
     return this.skillsKeys.slice(this.itemsPerColumn * 2);
+  }
+
+  skillLevel(n: number): string[] {
+    const skillLevel: string[] = new Array(n).fill('*');
+    return skillLevel;
+  }
+  
+  skillLevelFiller(n: number): string[] {
+    const skillLevel: string[] = new Array(this.ratingScale - n).fill('*');
+    return skillLevel;
   }
 }
