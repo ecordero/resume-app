@@ -1,12 +1,56 @@
-<section id="areas-of-expertise" class="print:text-2xs mb-0 text-sm">
+<section id="areas-of-expertise" class="mb-0">
   <h3
-    class="mb-2 border-b-1 text-xl font-semibold tracking-wide uppercase print:text-sm"
+    class="mb-2 border-b-1 text-xl font-semibold tracking-wide uppercase"
   >
     Key Skills
   </h3>
-  <div class="grid grid-cols-5 gap-14 print:gap-6">
-    @for (key of skillsKeys; track $index) {
-      <app-list-skills [list]="skills[key]"></app-list-skills>
-    }
+  <!-- Screen view -->
+  <div [class]="isPrintView ? 'hidden' : 'grid grid-cols-3'">
+    <ul class="list-disc list-outside space-y-1 p-4 ml-4 mb-6">
+      @for (key of firstColumnKeys; track $index) {
+        <li>
+          {{ getSkillsAsCommaSeparatedList(key) }}
+        </li>
+      }
+    </ul>
+    <ul class="list-disc list-outside space-y-1 p-4 mb-6">
+      @for (key of secondColumnKeys; track $index) {
+        <li>
+          {{ getSkillsAsCommaSeparatedList(key) }}
+        </li>
+      }
+    </ul>
+    <ul class="list-disc list-outside space-y-1 p-4 mb-6">
+      @for (key of thirdColumnKeys; track $index) {
+        <li>
+          {{ getSkillsAsCommaSeparatedList(key) }}
+        </li>
+      }
+    </ul>
+  </div>
+  
+  <!-- Print view -->
+  <div [class]="isPrintView ? 'grid grid-cols-3' : 'hidden'">
+    <ul class="list-disc list-outside space-y-1 p-4 ml-4 mb-6">
+      @for (key of firstColumnKeys; track $index) {
+        <li>
+          {{ getSkillsAsCommaSeparatedList(key) }}
+        </li>
+      }
+    </ul>
+    <ul class="list-disc list-outside space-y-1 p-4 mb-6">
+      @for (key of secondColumnKeys; track $index) {
+        <li>
+          {{ getSkillsAsCommaSeparatedList(key) }}
+        </li>
+      }
+    </ul>
+    <ul class="list-disc list-outside space-y-1 p-4 mb-6">
+      @for (key of thirdColumnKeys; track $index) {
+        <li>
+          {{ getSkillsAsCommaSeparatedList(key) }}
+        </li>
+      }
+    </ul>
   </div>
 </section>

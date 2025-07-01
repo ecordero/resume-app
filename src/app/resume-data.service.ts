@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, signal, effect } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IResume } from '../resume.data.model';
 import { environment } from '../environments/environment';
@@ -9,11 +9,34 @@ import { environment } from '../environments/environment';
 })
 export class ResumeDataService {
   http = inject(HttpClient);
+  
+  // Signal for data source state with localStorage persistence
+  useFakeData = signal(this.getInitialDataSource());
 
-  getData(useFakeData: boolean = false): Observable<IResume[]> {
-    const url = this.getDataUrl(useFakeData);
-    console.log('ResumeDataService.getData() called, useFakeData:', useFakeData, 'URL:', url);
+  constructor() {
+    // Persist data source changes to localStorage
+    effect(() => {
+      if (!environment.production) {
+        localStorage.setItem('resumeDataSource', this.useFakeData() ? 'fake' : 'real');
+      }
+    });
+  }
+
+  getData(): Observable<IResume[]> {
+    const url = this.getDataUrl(this.useFakeData());
+    console.log('ResumeDataService.getData() called, useFakeData:', this.useFakeData(), 'URL:', url);
     return this.http.get<IResume[]>(url);
+  }
+
+  toggleDataSource() {
+    this.useFakeData.set(!this.useFakeData());
+  }
+
+  private getInitialDataSource(): boolean {
+    if (environment.production) return false;
+    
+    const stored = localStorage.getItem('resumeDataSource');
+    return stored === 'fake';
   }
 
   private getDataUrl(useFakeData: boolean): string {

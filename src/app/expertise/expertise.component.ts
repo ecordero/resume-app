@@ -10,6 +10,7 @@ import { ListSkillsComponent } from '../list-skills/list-skills.component';
 })
 export class ExpertiseComponent implements OnInit {
   @Input({ required: true }) skills!: ISkills;
+  @Input() isPrintView: boolean = false;
 
   skillsKeys!: string[];
 
@@ -20,5 +21,25 @@ export class ExpertiseComponent implements OnInit {
 
   getSkillsKeys(skills: ISkills): string[] {
     return Object.keys(skills) as string[];
+  }
+
+  getSkillsAsCommaSeparatedList(key: string): string {
+    return this.skills[key].map(skill => skill.name).join(', ');
+  }
+
+  private get itemsPerColumn(): number {
+    return Math.ceil(this.skillsKeys.length / 3);
+  }
+
+  get firstColumnKeys(): string[] {
+    return this.skillsKeys.slice(0, this.itemsPerColumn);
+  }
+
+  get secondColumnKeys(): string[] {
+    return this.skillsKeys.slice(this.itemsPerColumn, this.itemsPerColumn * 2);
+  }
+
+  get thirdColumnKeys(): string[] {
+    return this.skillsKeys.slice(this.itemsPerColumn * 2);
   }
 }

@@ -1,19 +1,27 @@
-<ul class="mb-5 align-middle">
+<!-- Screen view -->
+<ul class="mb-5 align-middle print:hidden">
   @for (skill of list; track $index) {
-    <li class="whitespace-nowrap text-base print:text-xs">
-      {{ skill.name }}
-      <p class="hidden">
-        <span class="w-2xs text-xl font-semibold text-blue-400 print:text-xs">
+    <li
+      class="flex items-center justify-between text-base whitespace-nowrap"
+    >
+      <span>{{ skill.name }}</span>
+      <span [class]="hideRatings ? 'hidden' : ''">
+        <span class="w-2xs text-xl font-semibold text-blue-400">
           @for (rating of skillLevel(skill.rating); track $index) {
             *
           }
         </span>
-        <span class="w-2xs text-xl font-semibold text-gray-300 print:text-xs">
+        <span class="w-2xs text-xl font-semibold text-gray-300">
           @for (rating of skillLevelFiller(skill.rating); track $index) {
             &nbsp;&nbsp;
           }
         </span>
-      </p>
+      </span>
     </li>
   }
 </ul>
+
+<!-- Print view -->
+<div class="hidden print:block">
+  {{ skillsAsCommaSeparatedList }}
+</div>

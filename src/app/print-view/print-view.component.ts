@@ -40,7 +40,7 @@ export class PrintViewComponent implements OnInit {
   }
 
   getResumeData() {
-    this.resumeDataService.getData(false).subscribe({
+    this.resumeDataService.getData().subscribe({
       next: (data) => {
         this.resumeData = data[0];
         this.currentExperience = this.resumeData.experience.filter(
@@ -52,6 +52,11 @@ export class PrintViewComponent implements OnInit {
       },
       error: (error) => console.log('Error loading data:', error),
     });
+  }
+
+  toggleDataSource() {
+    this.resumeDataService.toggleDataSource();
+    this.getResumeData();
   }
 
   navigateBack() {

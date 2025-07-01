@@ -32,31 +32,19 @@ export class ResumeComponent implements OnInit {
   route = inject(ActivatedRoute);
   router = inject(Router);
   isDevelopment = !environment.production;
-  currentRoute = '';
 
   ngOnInit() {
     console.log('ResumeComponent ngOnInit');
     this.elementRef.nativeElement.ownerDocument.body.className =
       'bg-page text-gray-900 print:bg-transparent';
 
-    this.updateCurrentRoute();
     this.getResumeData();
-  }
-
-  updateCurrentRoute() {
-    this.currentRoute = this.route.snapshot.url.join('/');
   }
 
   getResumeData() {
     console.log('Getting resume data...');
     
-    // Check if we're on the fake route
-    const currentPath = this.route.snapshot.url.join('/');
-    const useFakeData = currentPath === 'fake';
-    
-    console.log('Current path:', currentPath, 'Use fake data:', useFakeData);
-    
-    this.resumeDataService.getData(useFakeData).subscribe({
+    this.resumeDataService.getData().subscribe({
       next: (data) => {
         console.log('Data received:', data);
         this.resumeData = data[0];
@@ -72,18 +60,9 @@ export class ResumeComponent implements OnInit {
     });
   }
 
-  navigateToReal() {
-    this.router.navigate(['/']).then(() => {
-      this.updateCurrentRoute();
-      this.getResumeData();
-    });
-  }
-
-  navigateToFake() {
-    this.router.navigate(['/fake']).then(() => {
-      this.updateCurrentRoute();
-      this.getResumeData();
-    });
+  toggleDataSource() {
+    this.resumeDataService.toggleDataSource();
+    this.getResumeData();
   }
 
   navigateToPrint() {

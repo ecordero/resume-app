@@ -9,6 +9,7 @@ import { ISkill } from '../../resume.data.model';
 })
 export class ListSkillsComponent {
   @Input({ required: true }) list!: ISkill[];
+  @Input() hideRatings: boolean = false;
   ratingScale = 4;
 
   skillLevel(n: number): string[] {
@@ -18,5 +19,9 @@ export class ListSkillsComponent {
   skillLevelFiller(n: number): string[] {
     const skillLevel: string[] = new Array(this.ratingScale - n).fill('*');
     return skillLevel;
+  }
+
+  get skillsAsCommaSeparatedList(): string {
+    return this.list.map(skill => skill.name).join(', ');
   }
 }
