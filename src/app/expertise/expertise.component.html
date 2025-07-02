@@ -28,26 +28,12 @@
     </div>
   </div>
   
-  <!-- ATS view - 3-column comma-separated -->
-  <div [class]="isAtsView ? 'grid grid-cols-3' : 'hidden'">
-    <ul class="list-disc list-outside space-y-1 p-4 ml-4 mb-6">
-      @for (key of firstColumnKeys; track $index) {
-        <li>
-          {{ getSkillsAsCommaSeparatedList(key) }}
-        </li>
-      }
-    </ul>
-    <ul class="list-disc list-outside space-y-1 p-4 mb-6">
-      @for (key of secondColumnKeys; track $index) {
-        <li>
-          {{ getSkillsAsCommaSeparatedList(key) }}
-        </li>
-      }
-    </ul>
-    <ul class="list-disc list-outside space-y-1 p-4 mb-6">
-      @for (key of thirdColumnKeys; track $index) {
-        <li>
-          {{ getSkillsAsCommaSeparatedList(key) }}
+  <!-- ATS view - Single column inline bullet list -->
+  <div [class]="isAtsView ? 'block' : 'hidden'">
+    <ul class="list-none p-4 ml-4 mb-6">
+      @for (key of skillsKeys; track $index) {
+        <li class="inline">
+          {{ getSkillsAsCommaSeparatedList(key) }}@if ($index < skillsKeys.length - 1) { <span class="font-bold text-lg mx-2">•</span> }
         </li>
       }
     </ul>

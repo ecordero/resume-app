@@ -1,0 +1,37 @@
+/* Print-specific font size reduction for ATS view */
+@media print {
+  :host {
+    font-size: 0.875rem; /* 14px - reduce from default 16px */
+  }
+  
+  /* Reduce heading sizes proportionally */
+  :host ::ng-deep h1 {
+    font-size: 1.5rem; /* 24px - reduced from larger default */
+  }
+  
+  :host ::ng-deep h2 {
+    font-size: 1.25rem; /* 20px - reduced from larger default */
+  }
+  
+  :host ::ng-deep h3 {
+    font-size: 1.125rem; /* 18px - reduced from larger default */
+  }
+  
+  :host ::ng-deep h4 {
+    font-size: 1rem; /* 16px - reduced from larger default */
+  }
+  
+  /* Reduce roles text size specifically */
+  :host ::ng-deep app-header h2 {
+    font-size: 1rem; /* 16px - smaller for print only */
+  }
+  
+  /* Ensure list items and other content inherit the smaller font size */
+  :host ::ng-deep ul,
+  :host ::ng-deep li,
+  :host ::ng-deep p,
+  :host ::ng-deep span,
+  :host ::ng-deep div {
+    font-size: inherit;
+  }
+}
