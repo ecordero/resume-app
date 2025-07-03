@@ -1,14 +1,10 @@
 <section id="experience">
-  <h3
-    class="mb-10 border-b-1 text-xl font-semibold tracking-wide uppercase"
-  >
+  <h3 class="mb-10 border-b-1 text-xl font-semibold tracking-wide uppercase">
     {{ headerText }}
   </h3>
   @for (pos of experience; track $index) {
     <div>
-      <div
-        class="mb-2 flex justify-between gap-5 border-b-1 border-gray-300"
-      >
+      <div class="mb-2 flex justify-between gap-5 border-b-1 border-gray-300">
         <h4 class="min-w-1/3 font-semibold">
           {{ pos.title }}
         </h4>
@@ -18,14 +14,13 @@
       </div>
       <div class="mb-4 flex gap-7 pb-3">
         <div class="w-1/3">
-          <p
-            class="text-l mb-3 text-sm font-bold text-gray-500"
-          >
+          <p class="text-l text-sm font-bold text-gray-500">
             {{ pos.company }}
           </p>
-          <p
-            class="font-serif text-sm tracking-tight text-gray-500 italic"
-          >
+          <p class="text-l mb-3 text-sm text-gray-500">
+            {{ pos.location }}
+          </p>
+          <p class="font-serif text-sm tracking-tight text-gray-500 italic">
             {{ pos.summary }}
           </p>
         </div>
