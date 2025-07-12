@@ -10,4 +10,8 @@ import { IExperience } from '../../resume.data.model';
 export class ExperienceComponent {
   @Input({ required: true }) experience!: IExperience[];
   @Input({ required: false }) headerText = 'Experience';
+
+  positionId(position: IExperience): string {
+    return `position-${position.startDate.split(' ').join('')}-${position.endDate.split(' ').join('')}`;
+  }
 }
