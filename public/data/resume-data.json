@@ -9,7 +9,7 @@
     },
     "title": "Senior Front End Web Developer | Software Engineer",
     "roles": ["Senior Front End Web Developer", "Software Engineer"],
-    "profile": "Senior web developer with 15+ years of hands-on experience delivering web-based, data-driven solutions for Fortune 500 companies, small businesses, and startups. Proven ability to lead projects from conception to implementation, blending expertise with a passion for learning and applying new technologies to deliver award-winning, innovative results. Experience working with both greenfield and legacy projects, ensuring successful solutions that drive business success. Experience in Ed Tech, Marketing, e-Commerce, and Workforce Management.",
+    "profile": "Senior web developer with 15+ years of hands-on experience delivering web-based, data-driven solutions for Fortune 500 companies, small businesses, and startups. Proven ability to lead both greenfield and legacy projects from conception to implementation, blending expertise with a passion for learning and applying new technologies to deliver award-winning, innovative solutions that drive business success. Experience in Ed Tech, Marketing, Mortgage and Financial Services, Workforce Management, and e-Commerce.",
     "expertise": {
       "languages": [
         { "name": "JavaScript", "rating": 4 },
@@ -58,6 +58,7 @@
         "summary": "Provide front end development expertise, leadership, and guidance as a subject matter expert (SME).",
         "accomplishments": [
           "Enhance and modernize Angular applications by adding features and removing technical debt.",
+          "Enhance and modernize Angular applications by adding features and removing technical debt.",
           "Develop new Angular application that consolidates existing applications and modernizes architecture, design, and development practices.",
           "Collaborated with other developers to update deployment builds related to updated applications.",
           "Successfully revived multiple Angular applications by upgrading from unsupported versions to version 19."
@@ -73,9 +74,8 @@
         "summary": "Provided technical expertise and strategic leadership within an Agile product development team, driving efficiency, collaboration, and innovation.",
         "accomplishments": [
           "Collaborate with UI/UX designers to successfully implement critical, designs of varying complexity, influencing the usability by suggesting alternative solutions as necessary.",
-          "Improved delivery time and quality of high-profile projects by enhancing front-end development efficiency, resulting in fewer late-stage API changes, minimal to no UI/UX design revisions, enabling more 'nice-to- haves.'",
-          "Elevated REST API output quality by collaborating with back-end developers to define required data structures earlier in the development cycle, resulting in robust, on-time REST API and project delivery.",
-          "Significantly improved quality of new and legacy code while moving it closer to modernization by creating, converting, and implementing TypeScript components in preparation for updating from AngularJS to Angular.",
+          "Improved delivery time and quality of high-profile projects by enhancing full stack development efficiency, resulting in fewer late-stage API changes, minimal to no UI/UX design revisions, enabling more 'nice-to- haves.'",
+          "Significantly improved quality of legacy code by creating, converting, and implementing TypeScript components in preparation for updating from AngularJS to Angular.",
           "Resolved complex issues related to legacy code by working with the QA team and the end user to determine the most timely solution within the constraints of the project."
         ]
       },
@@ -101,7 +101,7 @@
         "location": "Framingham, MA",
         "startDate": "July 2013",
         "endDate": "August 2014",
-        "isRecent": true,
+        "isRecent": false,
         "summary": "Successfully implemented redesign and shopping cart enhancements for staples.com, second largest online retailer at the time.",
         "accomplishments": [
           "Received company award for work on Staples.com redesign project, which included navigation and checkout enhancements, as well as credit card security feature integration.",
@@ -115,7 +115,7 @@
         "location": "Boston, MA",
         "startDate": "July 2010",
         "endDate": "March 2013",
-        "isRecent": true,
+        "isRecent": false,
         "summary": "Successfully implemented award- winning interactive designs to support marketing campaigns for Fortune 500 companies.",
         "accomplishments": [
           "Awarded Best in Class Interactive Media Award for Sunglass Hut (Luxottica) UI development work.",
