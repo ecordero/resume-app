@@ -1,21 +1,17 @@
 <header class="mb-8 flex-col justify-between gap-8 align-bottom">
   <div class="mb-3 min-w-xl">
-    <h1 class="border-b-2 text-6xl font-semibold tracking-wide">
+    <h1 class="print:text-10xl border-b-2 text-6xl font-semibold tracking-wide">
       {{ name }}
     </h1>
   </div>
-  <div
-    class="flex justify-between gap-10 leading-5.5 text-gray-600"
-  >
+  <div class="flex justify-between gap-10 leading-5.5 text-gray-600">
     <div class="min-w-2/5">
-      <h2
-        class="mb-5 text-2xl tracking-wide"
-      >
+      <h2 class="mb-5 text-2xl tracking-wide print:text-xl">
         @for (role of roles; track $index) {
           {{ role }}<br />
         }
       </h2>
-      <p class="mb-2 text-xl">{{ resumeLocation }}</p>
+      <p class="mb-2 text-xl print:text-lg">{{ resumeLocation }}</p>
     </div>
     <app-profile [profile]="profile"></app-profile>
   </div>

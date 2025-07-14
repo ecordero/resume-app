@@ -1,13 +1,13 @@
-<section id="contact" class="mb-6 text-sm">
+<section id="contact" class="mb-6 text-sm print:text-xs">
   <h3
-    class="mb-2 border-b-1 text-xl font-semibold tracking-wide uppercase"
+    class="mb-2 border-b-1 text-xl font-semibold tracking-wide uppercase print:text-lg"
   >
     Contact
   </h3>
-  <ul class="list-none">
-    <li>{{ contact.phone }}</li>
+  <ul class="list-none print:text-xs">
+    <li class="print:text-xs">{{ contact.phone }}</li>
     <li>
-      <a href="mailto:{{ contact.email }}" class="text-blue-500">{{
+      <a href="mailto:{{ contact.email }}" class="text-blue-500 print:text-xs">{{
         contact.email
       }}</a>
     </li>

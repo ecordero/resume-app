@@ -1,6 +1,6 @@
 <section id="areas-of-expertise" class="mb-0">
   <h3
-    class="mb-2 border-b-1 text-xl font-semibold tracking-wide uppercase"
+    class="mb-2 border-b-1 text-xl font-semibold tracking-wide uppercase print:text-lg"
   >
     Key Skills
   </h3>
@@ -11,13 +11,13 @@
       @for (key of skillsKeys; track $index) {
         <ul class="mb-5 align-middle">
           @for (skill of skills[key]; track $index) {
-            <li class="flex justify-between gap-0">
+            <li class="flex justify-between gap-0 print:text-sm">
               {{ skill.name }}
               <p>
-                <span class="font-semibold text-blue-400 w-2xs text-xl">
+                <span class="font-semibold text-blue-400 w-2xs text-xl print:text-lg">
                   @for (rating of skillLevel(skill.rating); track $index) { * }
                 </span>
-                <span class="font-semibold text-gray-300 w-2xs text-xl">
+                <span class="font-semibold text-gray-300 w-2xs text-xl print:text-lg">
                   @for (rating of skillLevelFiller(skill.rating); track $index) { * }
                 </span>
               </p>
@@ -30,10 +30,10 @@
   
   <!-- ATS view - Single column inline bullet list -->
   <div [class]="isAtsView ? 'block' : 'hidden'">
-    <ul class="list-none p-4 ml-4 mb-6">
+    <ul class="list-none p-4 ml-4 mb-6 print:text-sm">
       @for (key of skillsKeys; track $index) {
         <li class="inline">
-          {{ getSkillsAsCommaSeparatedList(key) }}@if ($index < skillsKeys.length - 1) { <span class="font-bold text-lg mx-2">•</span> }
+          {{ getSkillsAsCommaSeparatedList(key) }}@if ($index < skillsKeys.length - 1) { <span class="font-bold text-lg mx-2 print:text-base">•</span> }
         </li>
       }
     </ul>
