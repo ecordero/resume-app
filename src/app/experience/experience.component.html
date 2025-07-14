@@ -1,10 +1,14 @@
 <section id="experience">
-  <h3 class="mb-10 border-b-1 text-xl font-semibold tracking-wide uppercase print:text-lg">
+  <h3
+    class="mb-10 border-b-1 text-xl font-semibold tracking-wide uppercase print:text-lg"
+  >
     {{ headerText }}
   </h3>
   @for (pos of experience; track $index) {
     <div id="{{ positionId(pos) }}">
-      <div class="mb-2 flex justify-between gap-5 border-b-1 border-gray-300 print:break-after-avoid">
+      <div
+        class="mb-2 flex justify-between gap-5 border-b-1 border-gray-300 print:break-after-avoid"
+      >
         <h4 class="min-w-1/3 font-semibold print:text-sm">
           {{ pos.title }}
         </h4>
@@ -12,25 +16,29 @@
           {{ pos.startDate }}&ndash;{{ pos.endDate }}
         </p>
       </div>
-      <div class="mb-4 flex gap-7 pb-3">
-        <div class="w-1/3">
+      <div class="flex">
+        <div class="w-1/2">
           <p class="text-l text-sm font-bold text-gray-500 print:text-xs">
             {{ pos.company }}
           </p>
           <p class="text-l mb-3 text-sm text-gray-500 print:text-xs">
             {{ pos.location }}
           </p>
-          <p class="font-serif text-sm tracking-tight text-gray-500 italic print:text-xs">
+        </div>
+        <div class="w-1/2">
+          <p
+            class="font-serif text-sm tracking-tight text-gray-500 italic print:text-xs"
+          >
             {{ pos.summary }}
           </p>
         </div>
-        <div class="w-2/3">
-          <ul class="ml-4.5 list-disc print:text-sm">
-            @for (accomplishment of pos.accomplishments; track $index) {
-              <li class="mb-2 print:text-sm">{{ accomplishment }}</li>
-            }
-          </ul>
-        </div>
+      </div>
+      <div class="mb-4 pb-3">
+        <ul class="ml-4.5 list-disc print:text-sm">
+          @for (accomplishment of pos.accomplishments; track $index) {
+            <li class="mb-2 print:text-sm">{{ accomplishment }}</li>
+          }
+        </ul>
       </div>
     </div>
   }
