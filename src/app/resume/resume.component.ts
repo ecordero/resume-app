@@ -68,4 +68,10 @@ export class ResumeComponent implements OnInit {
   navigateToAts() {
     this.router.navigate(['/ats']);
   }
+
+  getToggleClasses() {
+    const baseClasses = 'peer h-6 w-11 rounded-full bg-gray-200 peer-focus:ring-4 peer-focus:ring-blue-300 peer-focus:outline-none after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[\'\'] peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full';
+    const colorClass = this.resumeDataService.useFakeData() ? 'peer-checked:bg-red-500' : 'bg-green-500';
+    return `${baseClasses} ${colorClass}`;
+  }
 }

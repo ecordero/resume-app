@@ -5,7 +5,10 @@
     {{ headerText }}
   </h3>
   @for (pos of experience; track $index) {
-    <div id="{{ positionId(pos) }}">
+    <div
+      id="{{ positionId(pos) }}"
+      [class]="$index === 1 ? 'print:break-before-page' : ''"
+    >
       <div
         class="print: mb-2 flex justify-between gap-5 border-b-1 border-gray-300 print:break-after-avoid print:border-current"
       >

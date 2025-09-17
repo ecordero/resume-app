@@ -9,7 +9,7 @@
     },
     "title": "Senior Front End Web Developer | Software Engineer",
     "roles": ["Senior Front End Web Developer", "Software Engineer"],
-    "profile": "Senior web developer with 15+ years of hands-on experience delivering web-based, data-driven solutions for Fortune 500 companies, small businesses, and startups. Proven ability to lead both greenfield and legacy projects from conception to implementation, blending expertise with a passion for learning and applying new technologies to deliver award-winning, innovative solutions that drive business success. Experience in Ed Tech, Marketing, Mortgage and Financial Services, Workforce Management, and e-Commerce.",
+    "profile": "Senior web developer with 15+ years of hands-on experience delivering web-based, data-driven solutions for Fortune 500 companies, small businesses, and startups. Proven ability to lead both greenfield and legacy projects from conception to implementation, specializing in collaborative integration between frontend and backend systems. Blends expertise with a passion for learning and applying new technologies to deliver award-winning, innovative solutions that drive business success. Experience in Ed Tech, Marketing, Mortgage and Financial Services, Workforce Management, and e-Commerce.",
     "expertise": {
       "languages": [
         { "name": "JavaScript", "rating": 4 },
@@ -42,9 +42,8 @@
         { "name": "SQL", "rating": 2 }
       ],
       "ai": [
-        { "name": "Agentic AI Tools", "rating": 2 },
-        { "name": "Claude Code", "rating": 2 },
         { "name": "Generative AI Tools", "rating": 2 },
+        { "name": "Claude Code", "rating": 2 },
         { "name": "Copilot", "rating": 2 },
         { "name": "Prompt Engineering", "rating": 2 },
         { "name": "Context Engineering", "rating": 2 }
@@ -60,10 +59,9 @@
         "isRecent": true,
         "summary": "Provide front end development expertise, leadership, and guidance as a subject matter expert (SME).",
         "accomplishments": [
+          "Plan and develop new Angular application that consolidates existing applications by modernizing architecture and design, and establishing best practices.",
           "Enhance and modernize Angular applications by adding features and removing technical debt.",
-          "Enhance and modernize Angular applications by adding features and removing technical debt.",
-          "Develop new Angular application that consolidates existing applications and modernizes architecture, design, and development practices.",
-          "Collaborated with other developers to update deployment builds related to updated applications.",
+          "Collaborate with other developers to update deployment builds related to updated applications.",
           "Successfully revived multiple Angular applications by upgrading from unsupported versions to version 19."
         ]
       },
@@ -76,8 +74,8 @@
         "isRecent": true,
         "summary": "Provided technical expertise and strategic leadership within an Agile product development team, driving efficiency, collaboration, and innovation.",
         "accomplishments": [
-          "Collaborate with UI/UX designers to successfully implement critical, designs of varying complexity, influencing the usability by suggesting alternative solutions as necessary.",
-          "Improved delivery time and quality of high-profile projects by enhancing full stack development efficiency, resulting in fewer late-stage API changes, minimal to no UI/UX design revisions, enabling more 'nice-to- haves.'",
+          "Collaborated with UI/UX designers to successfully implement critical designs of varying complexity, influencing the usability by suggesting alternative solutions as necessary.",
+          "Improved delivery time and quality of high-profile projects by enhancing full stack development efficiency, resulting in fewer late-stage API changes, minimal to no UI/UX design revisions, enabling more 'nice-to-haves.'",
           "Significantly improved quality of legacy code by creating, converting, and implementing TypeScript components in preparation for updating from AngularJS to Angular.",
           "Resolved complex issues related to legacy code by working with the QA team and the end user to determine the most timely solution within the constraints of the project."
         ]
@@ -89,7 +87,7 @@
         "startDate": "September 2014",
         "endDate": "September 2018",
         "isRecent": true,
-        "summary": "Leveraged my experience to optimize workflows, enhance feature reliability, and guide front-end development of flagship new HCM product using emergent technologies.",
+        "summary": "Leveraged my experience to optimize workflows, enhance feature reliability, and guide front-end development of flagship new HCM product using emerging technologies.",
         "accomplishments": [
           "Delivered a new flagship HCM product with exceptional code quality, UI performance, and enhanced usability and accessibility, utilizing technologies such as AngularJS, Node, FusionCharts, WebPack, Jasmine, and ARIA.",
           "Resolved UI memory leak by first using browser tools to successfully identify the root cause and then implementing front-end code changes and updating development processes to avoid reintroducing the issue.",
@@ -119,7 +117,7 @@
         "startDate": "July 2010",
         "endDate": "March 2013",
         "isRecent": false,
-        "summary": "Successfully implemented award- winning interactive designs to support marketing campaigns for Fortune 500 companies.",
+        "summary": "Successfully implemented award-winning interactive designs to support marketing campaigns for Fortune 500 companies.",
         "accomplishments": [
           "Awarded Best in Class Interactive Media Award for Sunglass Hut (Luxottica) UI development work.",
           "Successfully planned and developed web application work for Fortune 500 clients, including Staples, RAM Trucks, and Dunkin’ Donuts.",
