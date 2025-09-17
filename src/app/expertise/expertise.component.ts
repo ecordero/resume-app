@@ -24,7 +24,7 @@ export class ExpertiseComponent implements OnInit {
   }
 
   getSkillsAsCommaSeparatedList(key: string): string {
-    return this.skills[key].map(skill => skill.name).join(', ');
+    return this.skills[key].map((skill) => skill.name).join(', ');
   }
 
   private get itemsPerColumn(): number {
@@ -43,11 +43,6 @@ export class ExpertiseComponent implements OnInit {
     return this.skillsKeys.slice(this.itemsPerColumn * 2);
   }
 
-  skillLevel(n: number): string[] {
-    const skillLevel: string[] = new Array(n).fill('*');
-    return skillLevel;
-  }
-  
   skillLevelFiller(n: number): string[] {
     const skillLevel: string[] = new Array(this.ratingScale - n).fill('*');
     return skillLevel;

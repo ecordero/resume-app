@@ -13,25 +13,6 @@
           @for (skill of skills[key]; track $index) {
             <li class="flex justify-between gap-0 print:text-sm">
               {{ skill.name }}
-              <p>
-                <span
-                  class="w-2xs text-xl font-semibold text-blue-400 print:text-lg"
-                >
-                  @for (rating of skillLevel(skill.rating); track $index) {
-                    *
-                  }
-                </span>
-                <span
-                  class="w-2xs text-xl font-semibold text-gray-300 print:text-lg"
-                >
-                  @for (
-                    rating of skillLevelFiller(skill.rating);
-                    track $index
-                  ) {
-                    *
-                  }
-                </span>
-              </p>
             </li>
           }
         </ul>
