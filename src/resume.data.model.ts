@@ -16,7 +16,6 @@ export interface ISkills {
 
 export interface ISkill {
   name: string;
-  rating: number;
 }
 
 export interface IContact {
