@@ -67,10 +67,11 @@
         "isRecent": true,
         "summary": "Provide front end development expertise, leadership, and guidance as a subject matter expert (SME).",
         "accomplishments": [
-          "Plan and develop new Angular application that consolidates existing applications by modernizing architecture and design, and establishing best practices.",
-          "Enhance and modernize Angular applications by adding features and removing technical debt.",
-          "Collaborate with other developers to update deployment builds related to updated applications.",
-          "Successfully revived multiple Angular applications by upgrading from unsupported versions to version 19."
+          "Lead frontend architecture and development of Angular application that consolidates legacy applications.",
+          "Establish complete DevOps infrastructure including Git workflows, GitHub Actions CI/CD pipelines, AWS deployment automation, and build specifications to enable scalable development practices.",
+          "Enhance and modernize Angular applications by adding features and removing technical debt, collaborating with backend teams to establish data structure standards and API specifications that enable parallel development workflows.",
+          "Streamline deployment build workflows by coordinating application updates with infrastructure improvements, reducing integration friction and deployment complexity.",
+          "Revived multiple Angular applications by upgrading from unsupported versions to the latest version, eliminating security vulnerabilities and addressing audit compliance requirements."
         ]
       },
       {
