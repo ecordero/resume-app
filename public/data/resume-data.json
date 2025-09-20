@@ -14,36 +14,45 @@
       "languages": [
         { "name": "JavaScript" },
         { "name": "TypeScript" },
+        { "name": "JSON" },
         { "name": "HTML" }
       ],
       "frameworks": [
         { "name": "Angular" },
-        { "name": "React" },
-        { "name": "Karma/Jasmine" },
-        { "name": "Angular Material" }
+        { "name": "Angular CLI" },
+        { "name": "Angular Signals" },
+        { "name": "RxJS" },
+        { "name": "Jasmine" },
+        { "name": "Unit Testing" },
+        { "name": "React" }
       ],
       "uiux": [
         { "name": "CSS" },
         { "name": "Tailwind" },
-        { "name": "LESS/SASS" },
-        { "name": "Bootstrap" }
+        { "name": "Angular Material" },
+        { "name": "SASS/LESS" },
+        { "name": "ARIA" }
       ],
       "tooling": [
         { "name": "Git" },
+        { "name": "GitHub Actions" },
         { "name": "Vite" },
-        { "name": "Postman" },
-        { "name": "OpenAPI" },
-        { "name": "AWS" }
+        { "name": "Webpack" },
+        { "name": "Postman" }
       ],
       "backend": [
+        { "name": "OpenAPI" },
+        { "name": "REST" },
+        { "name": "Docker" },
+        { "name": "AWS" },
         { "name": "NodeJS" },
         { "name": "MongoDB" },
         { "name": "SQL" }
       ],
       "ai": [
-        { "name": "Generative AI Tools" },
         { "name": "Claude Code" },
-        { "name": "Copilot" },
+        { "name": "GitHub Copilot" },
+        { "name": "ChatGPT" },
         { "name": "Prompt Engineering" },
         { "name": "Context Engineering" }
       ]
