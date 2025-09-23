@@ -4,7 +4,12 @@
       "Bash(mkdir:*)",
       "Bash(npm start)",
       "Bash(npm run build:*)",
-      "Bash(npm test)"
+      "Bash(npm test)",
+      "Read(//Users/ecordero/Documents/Projects/**)",
+      "WebSearch",
+      "WebFetch(domain:blog.angular.dev)",
+      "WebFetch(domain:angular.dev)",
+      "Read(//Users/ecordero/.claude/commands/**)"
     ],
     "deny": []
   }
