@@ -9,11 +9,13 @@
       <p class="font-semibold print:text-xs">
         {{ cert.certification ?? cert.degree }}
         @if (cert.degree && cert.note) {
-          <span class="font-normal print:text-xs">({{ cert.note }})</span>
+          <span class="font-normal tracking-tighter print:text-xs"
+            >({{ cert.note }})</span
+          >
         }
       </p>
       <div class="text-right">
-        <p class="print:text-xs">
+        <p class="tracking-tight italic print:text-xs">
           {{ cert.institution }} ({{ cert.location }})
         </p>
       </div>
