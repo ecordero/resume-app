@@ -59,7 +59,11 @@ export class AtsViewComponent implements OnInit {
     this.getResumeData();
   }
 
-  navigateBack() {
+  navigateToAtsColumns() {
     this.router.navigate(['/']);
+  }
+
+  navigateToWeb() {
+    this.router.navigate(['/web']);
   }
 }

@@ -19,10 +19,22 @@
       </div>
     }
     <button
+      (click)="navigateToAtsColumns()"
+      class="rounded border bg-gray-100 px-3 py-1 text-sm text-gray-700 transition-colors hover:bg-blue-500 hover:text-white"
+    >
+      ATS Skill Cols
+    </button>
+    <button
       (click)="navigateToAts()"
       class="rounded border bg-gray-100 px-3 py-1 text-sm text-gray-700 transition-colors hover:bg-blue-500 hover:text-white"
     >
-      ATS View →
+      ATS Skill Groups
+    </button>
+    <button
+      disabled
+      class="rounded border bg-gray-300 px-3 py-1 text-sm text-gray-500 cursor-not-allowed"
+    >
+      Web
     </button>
   </div>
 </div>

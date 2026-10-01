@@ -65,6 +65,10 @@ export class ResumeComponent implements OnInit {
     this.getResumeData();
   }
 
+  navigateToAtsColumns() {
+    this.router.navigate(['/']);
+  }
+
   navigateToAts() {
     this.router.navigate(['/ats']);
   }

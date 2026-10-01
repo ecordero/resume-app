@@ -9,7 +9,10 @@
       "WebSearch",
       "WebFetch(domain:blog.angular.dev)",
       "WebFetch(domain:angular.dev)",
-      "Read(//Users/ecordero/.claude/commands/**)"
+      "Read(//Users/ecordero/.claude/skills/**)",
+      "WebFetch(domain:clickup.com)",
+      "WebFetch(domain:boards.greenhouse.io)",
+      "WebFetch(domain:claude.ai)"
     ],
     "deny": []
   }

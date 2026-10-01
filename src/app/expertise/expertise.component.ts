@@ -10,6 +10,7 @@ import { ISkills } from '../../resume.data.model';
 export class ExpertiseComponent implements OnInit {
   @Input({ required: true }) skills!: ISkills;
   @Input() isAtsView: boolean = false;
+  @Input() useColumns: boolean = false;
 
   skillsKeys!: string[];
   ratingScale = 4;
@@ -24,7 +25,10 @@ export class ExpertiseComponent implements OnInit {
   }
 
   getSkillsAsCommaSeparatedList(key: string): string {
-    return this.skills[key].map((skill) => skill.name).join(', ');
+    return this.skills[key]
+      .filter((skill) => skill.isUsed)
+      .map((skill) => skill.name)
+      .join(', ');
   }
 
   private get itemsPerColumn(): number {
@@ -41,6 +45,31 @@ export class ExpertiseComponent implements OnInit {
 
   get thirdColumnKeys(): string[] {
     return this.skillsKeys.slice(this.itemsPerColumn * 2);
+  }
+
+  get fourColumnSkills(): string[][] {
+    const columns: string[][] = [[], [], [], []];
+
+    // Flatten all skills from all groups, filtering by isUsed
+    const allSkills: string[] = [];
+    this.skillsKeys.forEach((key) => {
+      this.skills[key].forEach((skill) => {
+        if (skill.isUsed) {
+          allSkills.push(skill.name);
+        }
+      });
+    });
+
+    // Calculate skills per column for vertical distribution
+    const itemsPerColumn = Math.ceil(allSkills.length / 4);
+
+    // Distribute skills vertically (down columns, then across)
+    allSkills.forEach((skillName, index) => {
+      const columnIndex = Math.floor(index / itemsPerColumn);
+      columns[columnIndex].push(skillName);
+    });
+
+    return columns;
   }
 
   skillLevelFiller(n: number): string[] {

@@ -7,54 +7,57 @@
       "phone": "617-549-1648",
       "linkedin": "www.linkedin.com/in/ecordero"
     },
-    "title": "Senior Front End Web Developer | Software Engineer",
-    "roles": ["Senior Front End Web Developer", "Software Engineer"],
-    "profile": "Frontend specialist with full-stack foundation and 15+ years delivering solutions from conception to implementation across Fortune 500 companies, small businesses, and startups. Expertise spans collaborative design of data structures and API specifications to enable parallel development and reduce costly late-stage integration challenges. Technical leadership combines with systems thinking to modernize legacy applications and streamline development workflows. Experience in Ed Tech, Marketing, Mortgage and Financial Services, Workforce Management, and e-Commerce.",
+    "title": "Senior Full Stack Developer | Frontend Specialist",
+    "roles": ["Senior Full Stack Developer", "Frontend Specialist"],
+    "profile": "Full-stack developer specializing in frontend development with deep backend integration experience. Prevent costly integration delays through proactive collaboration on API design and data structures that enable parallel workflows. Nearly 30 years delivering scalable web applications, modernizing frontend systems, and establishing development practices across Fortune 500 and startup environments. Ed Tech, Financial Services, Workforce Management, e-Commerce, Marketing.",
     "expertise": {
       "languages": [
-        { "name": "JavaScript" },
-        { "name": "TypeScript" },
-        { "name": "JSON" },
-        { "name": "HTML" }
+        { "name": "TypeScript", "isUsed": true },
+        { "name": "JavaScript", "isUsed": true },
+        { "name": "JSON", "isUsed": false },
+        { "name": "HTML", "isUsed": true }
       ],
-      "frameworks": [
-        { "name": "Angular" },
-        { "name": "Angular CLI" },
-        { "name": "Angular Signals" },
-        { "name": "RxJS" },
-        { "name": "Jasmine" },
-        { "name": "Unit Testing" },
-        { "name": "React" }
+      "frontend": [
+        { "name": "Angular", "isUsed": true },
+        { "name": "Angular CLI", "isUsed": false },
+        { "name": "Angular Signals", "isUsed": false },
+        { "name": "RxJS", "isUsed": true },
+        { "name": "Jasmine", "isUsed": false },
+        { "name": "Unit Testing", "isUsed": true },
+        { "name": "React", "isUsed": false }
       ],
       "uiux": [
-        { "name": "CSS" },
-        { "name": "Tailwind" },
-        { "name": "Angular Material" },
-        { "name": "SASS/LESS" },
-        { "name": "ARIA" }
+        { "name": "CSS", "isUsed": true },
+        { "name": "Tailwind", "isUsed": true },
+        { "name": "Angular Material", "isUsed": false },
+        { "name": "SASS/LESS", "isUsed": false },
+        { "name": "ARIA", "isUsed": true }
       ],
       "tooling": [
-        { "name": "Git" },
-        { "name": "GitHub Actions" },
-        { "name": "Vite" },
-        { "name": "Webpack" },
-        { "name": "Postman" }
-      ],
-      "backend": [
-        { "name": "OpenAPI" },
-        { "name": "REST" },
-        { "name": "Docker" },
-        { "name": "AWS" },
-        { "name": "NodeJS" },
-        { "name": "MongoDB" },
-        { "name": "SQL" }
+        { "name": "Git", "isUsed": true },
+        { "name": "Vite", "isUsed": false },
+        { "name": "Webpack", "isUsed": false },
+        { "name": "Postman", "isUsed": true }
       ],
       "ai": [
-        { "name": "Claude Code" },
-        { "name": "GitHub Copilot" },
-        { "name": "ChatGPT" },
-        { "name": "Prompt Engineering" },
-        { "name": "Context Engineering" }
+        { "name": "GenAI", "isUsed": true },
+        { "name": "Claude Code", "isUsed": true },
+        { "name": "GitHub Copilot", "isUsed": true },
+        { "name": "ChatGPT", "isUsed": false },
+        { "name": "Prompt Engineering", "isUsed": true },
+        { "name": "Context Engineering", "isUsed": false }
+      ],
+      "devops": [
+        { "name": "GitHub Actions", "isUsed": true },
+        { "name": "Docker", "isUsed": true },
+        { "name": "AWS", "isUsed": true }
+      ],
+      "backend": [
+        { "name": "OpenAPI", "isUsed": true },
+        { "name": "REST", "isUsed": true },
+        { "name": "NodeJS", "isUsed": true },
+        { "name": "MongoDB", "isUsed": true },
+        { "name": "SQL", "isUsed": true }
       ]
     },
     "experience": [
@@ -67,15 +70,15 @@
         "isRecent": true,
         "summary": "Lead frontend development strategy and infrastructure modernization while establishing development workflows and architectural patterns.",
         "accomplishments": [
+          "Enhance and modernize Angular applications by rapidly prototyping and implementing Signals-based state management and other new features while removing technical debt, collaborating with backend teams to establish data structure standards and API specifications that enable parallel development workflows.",
           "Architect and develop new Angular application that consolidates legacy applications.",
           "Establish complete DevOps infrastructure including Git workflows, GitHub Actions CI/CD pipelines, AWS deployment automation, and build specifications to enable scalable development practices.",
-          "Enhance and modernize Angular applications by adding features and removing technical debt, collaborating with backend teams to establish data structure standards and API specifications that enable parallel development workflows.",
-          "Streamline deployment build workflows by coordinating application updates with infrastructure improvements, reducing integration friction and deployment complexity.",
-          "Revived multiple Angular applications by upgrading from unsupported versions to the latest version, eliminating security vulnerabilities and addressing audit compliance requirements."
+          "Revived multiple Angular applications by upgrading from unsupported versions to the latest version, eliminating security vulnerabilities and addressing audit compliance requirements.",
+          "Streamline deployment build workflows by coordinating application updates with infrastructure improvements, reducing integration friction and deployment complexity."
         ]
       },
       {
-        "title": "Senior Software Engineer, Front End (On Site, Remote)",
+        "title": "Senior Software Engineer, Front End (Remote)",
         "company": "Lexia / Cambium Learning Group",
         "location": "Concord, MA",
         "startDate": "September 2018",

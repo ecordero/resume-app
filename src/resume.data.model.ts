@@ -16,6 +16,7 @@ export interface ISkills {
 
 export interface ISkill {
   name: string;
+  isUsed: boolean;
 }
 
 export interface IContact {
