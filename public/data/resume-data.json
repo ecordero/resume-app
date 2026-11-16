@@ -68,6 +68,7 @@
         "startDate": "April 2025",
         "endDate": "Present",
         "isRecent": true,
+        "pageBreakAfter": true,
         "summary": "Lead frontend development strategy and infrastructure modernization while establishing development workflows and architectural patterns.",
         "accomplishments": [
           "Enhance and modernize Angular applications by rapidly prototyping and implementing Signals-based state management and other new features while removing technical debt, collaborating with backend teams to establish data structure standards and API specifications that enable parallel development workflows.",

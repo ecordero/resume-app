@@ -51,6 +51,7 @@
         "startDate": "September 2025",
         "endDate": "March 2026",
         "isRecent": true,
+        "pageBreakAfter": true,
         "summary": "Designed improvements to the reflective efficiency of solar sails using a nitinol shape-memory membrane to control sail flatness. Perseverance in Scientific Inquiry award recipient at the Worcester Regional Science and Engineering Fair.",
         "accomplishments": [
           "Researched theoretical behaviors of solar sails and existing models to determine areas of improvement and criteria for success.",

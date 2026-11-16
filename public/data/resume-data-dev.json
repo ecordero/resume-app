@@ -67,6 +67,7 @@
         "startDate": "March 2024",
         "endDate": "Present",
         "isRecent": true,
+        "pageBreakAfter": true,
         "summary": "Lead frontend development for enterprise SaaS platform serving 10,000+ users.",
         "accomplishments": [
           "Migrated legacy React application to Angular 18, improving performance by 40%.",

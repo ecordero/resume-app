@@ -48,6 +48,8 @@ export interface IExperience {
   summary: string;
   accomplishments: string[];
   skills?: ISkill[];
+  // Print page break after this item; omitted is the same as false
+  pageBreakAfter?: boolean;
 }
 
 export interface IEducation {
