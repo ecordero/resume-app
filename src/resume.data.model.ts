@@ -8,6 +8,14 @@ export interface IResume {
   expertise: ISkills;
   experience: IExperience[];
   education: IEducation[];
+  extracurriculars?: IExtracurricular[];
+}
+
+export interface IExtracurricular {
+  name: string;
+  startDate: string;
+  // Empty string when there is only a start date
+  endDate: string;
 }
 
 export interface IDataset {

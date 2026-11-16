@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { IEducation } from '../../resume.data.model';
 
 @Component({
@@ -8,5 +8,5 @@ import { IEducation } from '../../resume.data.model';
   styleUrl: './education.component.css',
 })
 export class EducationComponent {
-  @Input({ required: true }) education!: IEducation[];
+  education = input.required<IEducation[]>();
 }

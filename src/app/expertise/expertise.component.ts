@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 import { ISkills } from '../../resume.data.model';
 
 @Component({
@@ -7,58 +7,22 @@ import { ISkills } from '../../resume.data.model';
   templateUrl: './expertise.component.html',
   styleUrl: './expertise.component.css',
 })
-export class ExpertiseComponent implements OnInit {
-  @Input({ required: true }) skills!: ISkills;
-  @Input() isAtsView: boolean = false;
-  @Input() useColumns: boolean = false;
+export class ExpertiseComponent {
+  skills = input.required<ISkills>();
+  isAtsView = input(false);
+  useColumns = input(false);
 
-  skillsKeys!: string[];
-  ratingScale = 4;
+  // Recomputed whenever skills changes, e.g., when switching data sets
+  skillsKeys = computed(() => Object.keys(this.skills()));
 
-  ngOnInit() {
-    this.skillsKeys = this.getSkillsKeys(this.skills);
-    this.skillsKeys.forEach((k) => console.log(k));
-  }
-
-  getSkillsKeys(skills: ISkills): string[] {
-    return Object.keys(skills) as string[];
-  }
-
-  getSkillsAsCommaSeparatedList(key: string): string {
-    return this.skills[key]
-      .filter((skill) => skill.isUsed)
-      .map((skill) => skill.name)
-      .join(', ');
-  }
-
-  private get itemsPerColumn(): number {
-    return Math.ceil(this.skillsKeys.length / 3);
-  }
-
-  get firstColumnKeys(): string[] {
-    return this.skillsKeys.slice(0, this.itemsPerColumn);
-  }
-
-  get secondColumnKeys(): string[] {
-    return this.skillsKeys.slice(this.itemsPerColumn, this.itemsPerColumn * 2);
-  }
-
-  get thirdColumnKeys(): string[] {
-    return this.skillsKeys.slice(this.itemsPerColumn * 2);
-  }
-
-  get fourColumnSkills(): string[][] {
+  fourColumnSkills = computed(() => {
+    const skills = this.skills();
     const columns: string[][] = [[], [], [], []];
 
     // Flatten all skills from all groups, filtering by isUsed
-    const allSkills: string[] = [];
-    this.skillsKeys.forEach((key) => {
-      this.skills[key].forEach((skill) => {
-        if (skill.isUsed) {
-          allSkills.push(skill.name);
-        }
-      });
-    });
+    const allSkills = this.skillsKeys().flatMap((key) =>
+      skills[key].filter((skill) => skill.isUsed).map((skill) => skill.name),
+    );
 
     // Calculate skills per column for vertical distribution
     const itemsPerColumn = Math.ceil(allSkills.length / 4);
@@ -70,10 +34,12 @@ export class ExpertiseComponent implements OnInit {
     });
 
     return columns;
-  }
+  });
 
-  skillLevelFiller(n: number): string[] {
-    const skillLevel: string[] = new Array(this.ratingScale - n).fill('*');
-    return skillLevel;
+  getSkillsAsCommaSeparatedList(key: string): string {
+    return this.skills()[key]
+      .filter((skill) => skill.isUsed)
+      .map((skill) => skill.name)
+      .join(', ');
   }
 }

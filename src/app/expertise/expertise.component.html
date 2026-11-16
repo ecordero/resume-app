@@ -6,11 +6,11 @@
   </h3>
 
   <!-- Default view - Individual skills with ratings -->
-  <div [class]="!isAtsView && !useColumns ? 'block' : 'hidden'">
+  <div [class]="!isAtsView() && !useColumns() ? 'block' : 'hidden'">
     <div class="flex-col gap-y-5">
-      @for (key of skillsKeys; track $index) {
+      @for (key of skillsKeys(); track $index) {
         <ul class="mb-5 align-middle">
-          @for (skill of skills[key]; track $index) {
+          @for (skill of skills()[key]; track $index) {
             @if (skill.isUsed) {
               <li class="flex justify-between gap-0 print:text-sm">
                 {{ skill.name }}
@@ -23,12 +23,12 @@
   </div>
 
   <!-- ATS view - Single column inline bullet list -->
-  <div [class]="isAtsView && !useColumns ? 'block' : 'hidden'">
+  <div [class]="isAtsView() && !useColumns() ? 'block' : 'hidden'">
     <ul class="mb-6 ml-4 list-none p-4 print:text-sm">
-      @for (key of skillsKeys; track $index) {
+      @for (key of skillsKeys(); track $index) {
         <li class="inline">
           {{ getSkillsAsCommaSeparatedList(key) }}
-          @if ($index < skillsKeys.length - 1) {
+          @if ($index < skillsKeys().length - 1) {
             <span class="mx-2 text-lg font-bold print:text-base">•</span>
           }
         </li>
@@ -37,9 +37,9 @@
   </div>
 
   <!-- Columns view - Four column grid with bullet lists -->
-  <div [class]="useColumns ? 'block' : 'hidden'">
+  <div [class]="useColumns() ? 'block' : 'hidden'">
     <div class="grid grid-cols-4 gap-6 print:gap-1 mb-6 print:text-sm">
-      @for (columnSkills of fourColumnSkills; track $index) {
+      @for (columnSkills of fourColumnSkills(); track $index) {
         <div>
           <ul class="ml-4 list-disc list-outside">
             @for (skillName of columnSkills; track $index) {

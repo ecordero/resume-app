@@ -6,6 +6,7 @@ export const environment = {
   // Selectable resume data sets. The first entry is the default.
   datasets: [
     { file: 'resume-data.json', label: 'Default' },
+    { file: 'joe-cordero-seap-resume.json', label: 'Joe Cordero (SEAP)' },
   ] as IDataset[],
   fakeResumeDataUrl: '/data/resume-data-dev.json',
 };

@@ -1,0 +1,21 @@
+<!-- Renders nothing when the list is empty -->
+@if (extracurriculars().length) {
+  <section id="extracurriculars" class="mb-6 text-sm print:text-xs">
+    <h3
+      class="mb-2 border-b-1 text-xl font-semibold tracking-wide uppercase print:text-lg"
+    >
+      Extracurriculars
+    </h3>
+    @for (item of extracurriculars(); track $index) {
+      <div class="mb-1.5 flex justify-between print:text-xs">
+        <p class="font-semibold print:text-xs">{{ item.name }}</p>
+        <div class="text-right">
+          <p class="tracking-tight italic print:text-xs">
+            {{ item.startDate
+            }}@if (item.endDate.trim()) {&ndash;{{ item.endDate }}}
+          </p>
+        </div>
+      </div>
+    }
+  </section>
+}

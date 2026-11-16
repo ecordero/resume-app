@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-prior-experience',
@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './prior-experience.component.css',
 })
 export class PriorExperienceComponent {
-  @Input({ required: true }) title!: string;
-  @Input({ required: true }) sectionId!: string;
+  title = input.required<string>();
+  sectionId = input.required<string>();
 }

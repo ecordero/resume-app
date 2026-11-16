@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { ProfileComponent } from '../profile/profile.component';
 
 @Component({
@@ -8,9 +8,9 @@ import { ProfileComponent } from '../profile/profile.component';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  @Input({ required: true }) name!: string;
-  @Input({ required: true }) title!: string;
-  @Input({ required: true }) roles!: string[];
-  @Input({ required: true }) resumeLocation!: string;
-  @Input({ required: true }) profile!: string;
+  name = input.required<string>();
+  title = input.required<string>();
+  roles = input.required<string[]>();
+  resumeLocation = input.required<string>();
+  profile = input.required<string>();
 }

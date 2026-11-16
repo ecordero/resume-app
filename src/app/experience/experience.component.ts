@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { IExperience } from '../../resume.data.model';
 
 @Component({
@@ -8,8 +8,8 @@ import { IExperience } from '../../resume.data.model';
   styleUrl: './experience.component.css',
 })
 export class ExperienceComponent {
-  @Input({ required: true }) experience!: IExperience[];
-  @Input({ required: false }) headerText = 'Experience';
+  experience = input.required<IExperience[]>();
+  headerText = input('Experience');
 
   positionId(position: IExperience): string {
     return `position-${position.startDate.split(' ').join('')}-${position.endDate.split(' ').join('')}`;

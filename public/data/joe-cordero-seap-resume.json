@@ -1,0 +1,113 @@
+[
+  {
+    "name": "Joseph Cordero",
+    "location": "",
+    "contact": {
+      "email": "",
+      "phone": "",
+      "linkedin": ""
+    },
+    "title": "",
+    "roles": [],
+    "profile": "High school Junior with a passionate interest in science engineering and interest in pursuing a career in STEM, specifically aerospace engineering. Research experience includes participation in science fair competitions developing individual projects from concept, to experimentation, to fabrication. Provide leadership and collaboration in multiple clubs and in a range of projects and environments.",
+    "expertise": {
+      "r&d": [
+        { "name": "Technical Research", "isUsed": true },
+        { "name": "Experiment Design", "isUsed": true },
+        { "name": "Engineering Design", "isUsed": true },
+        { "name": "Circuit Design", "isUsed": true },
+        { "name": "Mathematical Modeling", "isUsed": true }
+      ],
+      "software": [
+        { "name": "CAD Software", "isUsed": true },
+        { "name": "MATLAB Software", "isUsed": true }
+      ],
+      "other": [
+        { "name": "Scientific Writing", "isUsed": true },
+        { "name": "Group Leadership", "isUsed": true }
+      ]
+    },
+    "experience": [
+      {
+        "title": "Massachusetts Science & Engineering Fair (MSEF)",
+        "company": "Grafton High School",
+        "location": "Grafton, MA",
+        "startDate": "June 2026",
+        "endDate": "Present",
+        "isRecent": true,
+        "summary": "Continuing the development of a nitinol shape-memory deployment system to increase the reflective efficiency of solar sails.",
+        "accomplishments": [
+          "Engineer prototypes that are used in experimental and performance testing",
+          "Model theoretical behaviors of satellite designs in space environment",
+          "Integrate control, deployment, and structural systems within the rigorous constraints of a small scale, CubeSat satellite",
+          "Collaborate with advisor and partners to accomplish project goals",
+          "Document experiments, design iterations, and project decisions according to stringent competition guidelines."
+        ]
+      },
+      {
+        "title": "Massachusetts Science & Engineering Fair (MSEF)",
+        "company": "Grafton High School",
+        "location": "Grafton, MA",
+        "startDate": "September 2025",
+        "endDate": "March 2026",
+        "isRecent": true,
+        "summary": "Designed improvements to the reflective efficiency of solar sails using a nitinol shape-memory membrane to control sail flatness. Perseverance in Scientific Inquiry award recipient at the Worcester Regional Science and Engineering Fair.",
+        "accomplishments": [
+          "Researched theoretical behaviors of solar sails and existing models to determine areas of improvement and criteria for success.",
+          "Quantified engineering constraints and model performance behavior using mathematical modeling",
+          "Constructed models that developed different potential sail designs using a variation in structure.",
+          "Performed experiments that isolated design elements and determined best performance among a range of potential models.",
+          "Communicated findings and progress at local, regional, and state level science fair competitions"
+        ]
+      },
+      {
+        "title": "Massachusetts Science & Engineering Fair (MSEF)",
+        "company": "Grafton High School",
+        "location": "Grafton, MA",
+        "startDate": "September 2024",
+        "endDate": "March 2026",
+        "isRecent": true,
+        "summary": "Produced a novel, low-cost, easy-to-use bacterial detection system for use in identifying the contamination of water samples. First Place Grafton High School Science Fair.",
+        "accomplishments": [
+          "Invented an effective solution to address real-world issues pertaining to bacterial water safety.",
+          "Designed experiments that determined the behaviors of bacterial dyes and buoyancy agents using limited research materials.",
+          "Cultivated lactobacillus samples in accordance with research timelines and experimental demands.",
+          "Presented design at local, regional, and state level science competitions."
+        ]
+      }
+    ],
+    "extracurriculars": [
+      {
+        "name": "Worcester Youth Jazz Ensemble",
+        "startDate": "2025",
+        "endDate": "Present"
+      },
+      {
+        "name": "President Grafton High School (GHS) Debate Club",
+        "startDate": "2025",
+        "endDate": "Present"
+      },
+      {
+        "name": "Founder and Co-President GHS Engineering Club",
+        "startDate": "2025",
+        "endDate": "Present"
+      },
+      {
+        "name": "National Honors Society",
+        "startDate": "2025",
+        "endDate": "Present"
+      },
+      {
+        "name": "Family and Community Leadership Club",
+        "startDate": "2025",
+        "endDate": "Present"
+      },
+      {
+        "name": "Lions Club Youth Speech Competition",
+        "startDate": "2025",
+        "endDate": "Present"
+      }
+    ],
+    "education": []
+  }
+]

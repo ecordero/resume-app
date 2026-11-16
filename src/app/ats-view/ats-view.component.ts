@@ -7,6 +7,8 @@ import { ResumeDataService } from '../resume-data.service';
 import { ContactComponent } from '../contact/contact.component';
 import { IExperience, IResume } from '../../resume.data.model';
 import { NavComponent } from '../nav/nav.component';
+import { hasContactData, hasEducationData } from '../resume-data.utils';
+import { ExtracurricularsComponent } from '../extracurriculars/extracurriculars.component';
 
 @Component({
   selector: 'app-ats-view',
@@ -17,6 +19,7 @@ import { NavComponent } from '../nav/nav.component';
     EducationComponent,
     ContactComponent,
     NavComponent,
+    ExtracurricularsComponent,
   ],
   templateUrl: './ats-view.component.html',
   styleUrl: './ats-view.component.css'
@@ -25,6 +28,8 @@ export class AtsViewComponent implements OnInit {
   resumeData: IResume | undefined;
   currentExperience: IExperience[] = [];
   previousExperience: IExperience[] = [];
+  hasContact = false;
+  hasEducation = false;
   elementRef = inject(ElementRef);
   resumeDataService = inject(ResumeDataService);
 
@@ -44,6 +49,8 @@ export class AtsViewComponent implements OnInit {
         this.previousExperience = this.resumeData.experience.filter(
           (exp) => exp.isRecent !== true,
         );
+        this.hasContact = hasContactData(this.resumeData.contact);
+        this.hasEducation = hasEducationData(this.resumeData.education);
       },
       error: (error) => console.log('Error loading data:', error),
     });

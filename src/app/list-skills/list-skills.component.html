@@ -1,11 +1,11 @@
 <!-- Screen view -->
 <ul class="mb-5 align-middle print:hidden">
-  @for (skill of list; track $index) {
+  @for (skill of list(); track $index) {
     <li
       class="flex items-center justify-between text-base whitespace-nowrap"
     >
       <span>{{ skill.name }}</span>
-      <span [class]="hideRatings ? 'hidden' : ''">
+      <span [class]="hideRatings() ? 'hidden' : ''">
         <span class="w-2xs text-xl font-semibold text-blue-400">
           @for (rating of skillLevel(skill.rating); track $index) {
             *
@@ -23,5 +23,5 @@
 
 <!-- Print view -->
 <div class="hidden print:block">
-  {{ skillsAsCommaSeparatedList }}
+  {{ skillsAsCommaSeparatedList() }}
 </div>

@@ -5,17 +5,17 @@
     Contact
   </h3>
   <ul class="list-none print:text-xs">
-    <li class="print:text-xs">{{ contact.phone }}</li>
+    <li class="print:text-xs">{{ contact().phone }}</li>
     <li>
       <a
-        href="mailto:{{ contact.email }}"
+        href="mailto:{{ contact().email }}"
         class="text-blue-500 print:text-xs"
-        >{{ contact.email }}</a
+        >{{ contact().email }}</a
       >
     </li>
     <li>
-      <a href="{{ contact.linkedin }}" class="text-blue-500">{{
-        contact.linkedin
+      <a href="{{ contact().linkedin }}" class="text-blue-500">{{
+        contact().linkedin
       }}</a>
     </li>
   </ul>

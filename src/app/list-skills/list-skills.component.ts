@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 import { ISkill } from '../../resume.data.model';
 
 @Component({
@@ -8,8 +8,8 @@ import { ISkill } from '../../resume.data.model';
   styleUrl: './list-skills.component.css',
 })
 export class ListSkillsComponent {
-  @Input({ required: true }) list!: ISkill[];
-  @Input() hideRatings: boolean = false;
+  list = input.required<ISkill[]>();
+  hideRatings = input(false);
   ratingScale = 4;
 
   skillLevel(n: number): string[] {
@@ -21,7 +21,7 @@ export class ListSkillsComponent {
     return skillLevel;
   }
 
-  get skillsAsCommaSeparatedList(): string {
-    return this.list.map(skill => skill.name).join(', ');
-  }
+  skillsAsCommaSeparatedList = computed(() =>
+    this.list().map((skill) => skill.name).join(', '),
+  );
 }

@@ -4,7 +4,7 @@
   >
     Education
   </h3>
-  @for (cert of education; track $index) {
+  @for (cert of education(); track $index) {
     <div class="mb-1.5 flex justify-between print:text-xs">
       <p class="font-semibold print:text-xs">
         {{ cert.certification ?? cert.degree }}

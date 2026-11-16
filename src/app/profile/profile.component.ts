@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './profile.component.css',
 })
 export class ProfileComponent {
-  @Input({ required: true }) profile!: string;
+  profile = input.required<string>();
 }

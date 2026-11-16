@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { IContact } from '../../resume.data.model';
 
 @Component({
@@ -8,5 +8,5 @@ import { IContact } from '../../resume.data.model';
   styleUrl: './contact.component.css',
 })
 export class ContactComponent {
-  @Input({ required: true }) contact!: IContact;
+  contact = input.required<IContact>();
 }

@@ -2,9 +2,9 @@
   <h3
     class="mb-5 border-b-1 text-xl font-semibold tracking-wide uppercase print:text-lg"
   >
-    {{ headerText }}
+    {{ headerText() }}
   </h3>
-  @for (pos of experience; track $index) {
+  @for (pos of experience(); track $index) {
     <div
       id="{{ positionId(pos) }}"
       [class]="$index === 1 ? 'print:break-before-page' : ''"
