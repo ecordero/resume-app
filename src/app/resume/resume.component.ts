@@ -1,6 +1,4 @@
 import { Component, ElementRef, inject, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
 import { ExpertiseComponent } from '../expertise/expertise.component';
 import { ExperienceComponent } from '../experience/experience.component';
@@ -8,7 +6,7 @@ import { EducationComponent } from '../education/education.component';
 import { ResumeDataService } from '../resume-data.service';
 import { ContactComponent } from '../contact/contact.component';
 import { IExperience, IResume } from '../../resume.data.model';
-import { environment } from '../../environments/environment';
+import { NavComponent } from '../nav/nav.component';
 
 @Component({
   selector: 'app-resume',
@@ -18,7 +16,7 @@ import { environment } from '../../environments/environment';
     ExperienceComponent,
     EducationComponent,
     ContactComponent,
-    CommonModule,
+    NavComponent,
   ],
   templateUrl: './resume.component.html',
   styleUrls: []
@@ -29,9 +27,6 @@ export class ResumeComponent implements OnInit {
   previousExperience: IExperience[] = [];
   elementRef = inject(ElementRef);
   resumeDataService = inject(ResumeDataService);
-  route = inject(ActivatedRoute);
-  router = inject(Router);
-  isDevelopment = !environment.production;
 
   ngOnInit() {
     console.log('ResumeComponent ngOnInit');
@@ -58,24 +53,5 @@ export class ResumeComponent implements OnInit {
       },
       error: (error) => console.log('Error loading data:', error),
     });
-  }
-
-  toggleDataSource() {
-    this.resumeDataService.toggleDataSource();
-    this.getResumeData();
-  }
-
-  navigateToAtsColumns() {
-    this.router.navigate(['/']);
-  }
-
-  navigateToAts() {
-    this.router.navigate(['/ats']);
-  }
-
-  getToggleClasses() {
-    const baseClasses = 'peer h-6 w-11 rounded-full bg-gray-200 peer-focus:ring-4 peer-focus:ring-blue-300 peer-focus:outline-none after:absolute after:start-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-white after:transition-all after:content-[\'\'] peer-checked:after:translate-x-full peer-checked:after:border-white rtl:peer-checked:after:-translate-x-full';
-    const colorClass = this.resumeDataService.useFakeData() ? 'peer-checked:bg-red-500' : 'bg-green-500';
-    return `${baseClasses} ${colorClass}`;
   }
 }

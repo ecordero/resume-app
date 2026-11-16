@@ -1,6 +1,4 @@
 import { Component, ElementRef, inject, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../header/header.component';
 import { ExpertiseComponent } from '../expertise/expertise.component';
 import { ExperienceComponent } from '../experience/experience.component';
@@ -8,7 +6,7 @@ import { EducationComponent } from '../education/education.component';
 import { ResumeDataService } from '../resume-data.service';
 import { ContactComponent } from '../contact/contact.component';
 import { IExperience, IResume } from '../../resume.data.model';
-import { environment } from '../../environments/environment';
+import { NavComponent } from '../nav/nav.component';
 
 @Component({
   selector: 'app-ats-columns-view',
@@ -18,7 +16,7 @@ import { environment } from '../../environments/environment';
     ExperienceComponent,
     EducationComponent,
     ContactComponent,
-    CommonModule,
+    NavComponent,
   ],
   templateUrl: './ats-columns-view.component.html',
   styleUrl: './ats-columns-view.component.css'
@@ -29,9 +27,6 @@ export class AtsColumnsViewComponent implements OnInit {
   previousExperience: IExperience[] = [];
   elementRef = inject(ElementRef);
   resumeDataService = inject(ResumeDataService);
-  route = inject(ActivatedRoute);
-  router = inject(Router);
-  isDevelopment = !environment.production;
 
   ngOnInit() {
     this.elementRef.nativeElement.ownerDocument.body.className =
@@ -52,18 +47,5 @@ export class AtsColumnsViewComponent implements OnInit {
       },
       error: (error) => console.log('Error loading data:', error),
     });
-  }
-
-  toggleDataSource() {
-    this.resumeDataService.toggleDataSource();
-    this.getResumeData();
-  }
-
-  navigateToAts() {
-    this.router.navigate(['/ats']);
-  }
-
-  navigateToWeb() {
-    this.router.navigate(['/web']);
   }
 }

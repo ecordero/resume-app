@@ -10,6 +10,11 @@ export interface IResume {
   education: IEducation[];
 }
 
+export interface IDataset {
+  file: string;
+  label: string;
+}
+
 export interface ISkills {
   [index: string]: ISkill[];
 }

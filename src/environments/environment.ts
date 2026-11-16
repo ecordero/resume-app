@@ -1,5 +1,11 @@
+import { IDataset } from '../resume.data.model';
+
 export const environment = {
   production: false,
-  resumeDataUrl: '/data/resume-data.json',
+  dataBasePath: '/data/',
+  // Selectable resume data sets. The first entry is the default.
+  datasets: [
+    { file: 'resume-data.json', label: 'Default' },
+  ] as IDataset[],
   fakeResumeDataUrl: '/data/resume-data-dev.json',
 };
